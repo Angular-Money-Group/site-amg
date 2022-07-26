@@ -1,0 +1,38 @@
+<header class="baseline">
+  <div class="baseline-content">
+    <div class="baseline-center">
+      <div class="baseline-logo">
+        <img src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" />
+      </div>
+      <div class="baseline-menu">
+        <nav>
+          <span (click)="goTo(item.route)" *ngFor="let item of menu">
+            {{ item.name }}</span
+          >
+        </nav>
+      </div>
+      <div class="baseline-button">
+        <button type="button" class="btnHome">Contato</button>
+      </div>
+    </div>
+    <div class="mobile">
+      <div class="icon-mobile">
+        <div class="icon" (click)="hideShow()">
+          <i [ngClass]="showMenu ? 'bi bi-x' : 'bi bi-list'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="content-mobile" *ngIf="showMenu === true">
+  <div class="menu-mobile">
+    <nav class="menu">
+      <span (click)="goTo(item.route)" *ngFor="let item of menu">
+        {{ item.name }}</span
+      >
+    </nav>
+    <div class="moblie-button">
+      <button type="button" class="btn btn-white-mobile">Contato</button>
+    </div>
+  </div>
+</div>

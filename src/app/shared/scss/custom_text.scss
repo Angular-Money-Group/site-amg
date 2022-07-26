@@ -1,0 +1,14 @@
+.title-line {
+  font-family: "Rubik";
+  font-size: 28px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .line {
+    content: " ";
+    background-color: var(--black);
+    display: block;
+    height: 3px;
+    width: 120px;
+  }
+}
