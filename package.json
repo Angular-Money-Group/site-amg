@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -37,11 +38,5 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && ng test --watch=false --browsers=ChromeHeadless ",
-      "pre-push": "ng build"
-    }
   }
 }
