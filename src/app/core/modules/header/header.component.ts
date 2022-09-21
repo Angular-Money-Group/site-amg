@@ -12,28 +12,26 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   showMenu: boolean = false;
   menu: any[] = [
+    // {
+    //   name: 'Início',
+    //   route: '',
+    // },
     {
-      name: 'Início',
-      route: '',
-    },
-    {
-      name: 'Empresa',
+      name: 'Sobre a AMG',
       route: 'empresa',
     },
     {
-      name: 'Serviços',
+      name: 'Soluções',
       route: 'servicos',
     },
     {
-      name: 'Cursos',
-      route: 'cursos',
-    },
-    {
-      name: 'Comunidade',
-      route: 'comunidade',
+      name: 'Trabalhe Conosco',
+      //route: 'cursos',
     },
   ];
-
+  home() {
+    route: '';
+  }
   constructor(private route: Router) {}
 
   ngOnInit(): void {}

@@ -1,15 +1,15 @@
 .baseline-button .btn-outline-primary,
 .btnHome {
   width: 132px;
-  height: 50px;
-  border: 2px solid var(--first-white);
+  height: 40px;
+  border: 2px;
   color: var(--first-white);
-  background-color: transparent;
+  background-color: #587b52;
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  border-radius: 8px;
+  border-radius: 12px;
 
   &:hover {
     cursor: pointer;

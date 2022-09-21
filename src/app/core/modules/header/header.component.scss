@@ -3,7 +3,7 @@
   .baseline {
     width: 100%;
     height: 81px;
-    background: var(--first-green);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@
       width: 95%;
       display: flex;
       .icon-mobile {
-        color: var(--first-white);
+        color: rgba(0, 0, 0, 0);
         width: 50px;
         display: none;
         cursor: pointer;
@@ -35,9 +35,9 @@
           span {
             font-size: 20px;
             color: var(--first-white);
-            font-family: "Rubik";
+            font-family: "Albert Sans";
             font-style: normal;
-            line-height: 36px;
+            line-height: 120%;
             &:hover {
               cursor: pointer;
             }
@@ -54,7 +54,7 @@
     i {
       font-size: 40px;
     }
-    .moblie-button {
+    .mobile-button {
       display: flex;
       width: 100%;
       justify-content: center;

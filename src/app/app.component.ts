@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'amg';
 
-  ngOnInit(){
+  ngOnInit() {
     // AOS.init({
     //   once: true,
     //   duration: 1200,
