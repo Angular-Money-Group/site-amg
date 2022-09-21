@@ -1,16 +1,16 @@
 <header class="baseline">
   <div class="baseline-content">
+    <div class="baseline-logo">
+      <a href="/"> <img src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
+    </div>
     <div class="baseline-center">
-      <div class="baseline-logo">
-        <a href="/">
-          <img src="../../assets/svg/LOGO 2.svg" alt="Amg Logo"
-        /></a>
-      </div>
       <div class="baseline-menu">
         <nav>
           <span (click)="goTo(item.route)" *ngFor="let item of menu">
-            {{ item.name }}</span
-          >
+            {{ item.name }}
+            <span *ngIf="item.name == 'Soluções'">
+              <img src="../../assets/svg/arrow_down.svg" alt="" /> </span
+          ></span>
         </nav>
       </div>
       <div class="baseline-button">
@@ -33,7 +33,7 @@
         {{ item.name }}</span
       >
     </nav>
-    <div class="moblie-button">
+    <div class="mobile-button">
       <button type="button" class="btn btn-white-mobile">Contato</button>
     </div>
   </div>

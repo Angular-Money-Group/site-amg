@@ -1,41 +1,13 @@
-<footer class="center baseboard">
-  <div class="default-container" data-aos="fade-left" data-aos-duration="1500">
-    <div class="baseboard--logo">
-      <img src="../../assets/svg/LOGO 3.svg" alt="" />
+<footer class="baseboard">
+  <div class="default-container">
+    <div class="baseboard-logo">
+      <img class="logo" src="../../assets/svg/LOGO 4.svg" alt="" />
     </div>
-    <div class="baseboard--content">
-      <div class="baseboard--content__contact">
-        <ul class="baseboard--content__contact__list">
-          <li *ngFor="let contact of contentContact">
-            <img [src]="contact.icon" alt="" />
-            <span>{{ contact.content }}</span>
-          </li>
-        </ul>
+
+    <div class="baseboard-button">
+      <div class="baseline-button">
+        <button type="button" class="btnHome">Contato</button>
       </div>
-      <div class="baseboard--content__menu">
-        <div class="baseboard--content__menu__pages">
-          <h3>Páginas Principais</h3>
-          <ul>
-            <li *ngFor="let item of mainPages">
-              <a (click)="goTo(item.route)">{{ item.name }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="baseboard--content__menu__knowledge">
-          <h3>Conhecimentos</h3>
-          <ul>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
-            <li>
-              <a routerLink="'comunidade'">Comunidade</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="baseboard--content__copyright">
-      <small><i>&copy; AMG 2022. Todos os direitos reservados.</i></small>
     </div>
   </div>
 </footer>
