@@ -7,6 +7,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
+
   {
     path: 'comunidade',
     loadChildren: () =>

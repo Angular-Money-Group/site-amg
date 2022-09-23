@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;900&display=swap");
 @import "./app/shared/scss/mixins.scss";
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 .btn-outline-info {
   width: 125px;
@@ -11,7 +14,6 @@
   background: #ffffff;
   border-radius: 8.45882px;
   margin-left: 25px;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -29,7 +31,6 @@
   border: 2px solid #ffffff;
   color: #ffffff;
   background-color: transparent;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -46,7 +47,6 @@
   border-radius: 10px;
   width: 155px;
   height: 52px;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -63,7 +63,6 @@
   height: 40px;
   background-color: #000000;
   border-color: #ffffff;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -78,7 +77,6 @@
   height: 60px;
   background: #ffffff;
   border-radius: 10px;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -93,7 +91,6 @@
   height: 45px;
   background: #ffffff;
   border-radius: 10px;
-  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -108,7 +105,7 @@
 }
 
 /*font implement*/
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Montserrat:wght@400;500;700&family=Poppins:wght@600&family=Rubik:wght@500&display=swap");
+
 /*variables*/
 :root {
   /*principal colors*/

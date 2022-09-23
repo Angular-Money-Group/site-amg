@@ -1,170 +1,34 @@
-<div class="background-gradient"></div>
-<img src="/assets/image/Background Image.svg" alt="" />
-<!-- <main class="initial fadeIn">
-  <section class="initial--home sector">
-    <div class="initial--home__content">
-      <h1 class="title-line">
-        <div class="line"></div>
-        {{ companyTitle }}
-      </h1>
-      <h2 class="title">{{ title }}</h2>
-      <p>
-        Integramos squads sob demanda com alta maturidade em processos ágeis.
-        Realizamos entregas produtivas para tracionar o desenvolvimento do seu
-        negócio.
-      </p>
-      <div>
-        <button
-          type="button"
-          [routerLink]="'/servicos'"
-          class="btn btn-dark py-3 px-5"
-        >
-          Entrar em contato
-        </button>
+<div class="top">
+  <div class="background-gradient">
+    <div class="container-contact">
+      <div class="contact-box">
+        <h1 class="contact-tittle">
+          Construindo o futuro através da tecnologia e inovação
+        </h1>
+        <h2 class="contact-text">
+          Conectamos sua empresa com o mundo da tecnologia em tempo hábil.
+        </h2>
+        <button class="contact-button">Entrar em contato</button>
       </div>
+      <div class="contact-box"></div>
     </div>
-    <div class="initial--home__images">
-      <div class="initial--home__images__watch">
-        <img src="../../../assets/image/tec2.png" alt="" />
-      </div>
-      <div class="initial--home__images__notebook">
-        <img src="../../../assets/image/tec1.png" alt="" />
-      </div>
-    </div>
-  </section>
+  </div>
+</div>
 
-  <section
-    class="initial--technologies"
-    data-aos="fade-up"
-    data-aos-duration="1500"
-  >
-    <div
-      class="initial--technologies__title"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <h2 class="title">Utilizamos tecnologias que estão em alta</h2>
-    </div>
-
-    <div
-      class="initial--technologies__cards"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <div
-        class="initial--technologies__cards__card"
-        *ngFor="let item of ourTechnologies"
-      >
-        <img src="{{ item.img }}" alt="" />
-        <h3>{{ item.title }}</h3>
-        <p>
-          {{ item.content }}
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="initial--technologies__button"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <button type="button" class="btn btn-dark py-3 px-5">
-        Entrar em contato
-      </button>
-    </div>
-  </section>
-
-  <section
-    class="initial--about sector"
-    data-aos="fade-up"
-    data-aos-duration="1500"
-  >
-    <div
-      class="initial--about__images"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <div class="initial--about__images__retangle"></div>
-      <div class="initial--about__images__circle"></div>
-    </div>
-    <div
-      class="initial--about__content"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <h2 class="title-line" data-aos="fade-up" data-aos-duration="1500">
-        <div class="line"></div>
-        Quem somos
-      </h2>
-      <h3 class="title" data-aos="fade-up" data-aos-duration="1500">
-        Angular Money Group
-      </h3>
-      <p data-aos="fade-up" data-aos-duration="1500">
-        {{ aboutUs }}
-      </p>
-      <div
-        class="initial--about__content__button"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <button type="button" class="btn btn-dark py-3 px-5">Saiba mais</button>
-      </div>
-    </div>
-  </section>
-
-  <section
-    class="initial--methods sector"
-    data-aos="fade-up"
-    data-aos-duration="1500"
-  >
-    <div
-      class="initial--methods__content"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
-      <h2 class="title-line">
-        <div class="line"></div>
-        Como trabalhamos
-      </h2>
-      <h3 class="title">Método que utilizamos para Trabalhar</h3>
-
-      <div
-        class="initial--methods__content__cards"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <div
-          class="initial--methods__content__cards__card"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          *ngFor="let item of ourMethod"
-        >
-          <div class="initial--methods__content__cards__card__image">
-            <img src="{{ item.img }}" alt="" />
-          </div>
-          <div class="initial--methods__content__cards__card__text">
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.content }}</p>
-          </div>
-        </div>
-      </div>
-      <div
-        class="initial--methods__content__button"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <button type="button" class="btn btn-dark py-3 px-5">Saiba mais</button>
-      </div>
-    </div>
-    <div class="initial--methods__image">
-      <img src="../../../assets/image/lamp.png" alt="" />
-    </div>
-  </section>
-  <section
-    class="initial--methods sector"
-    data-aos="fade-up"
-    data-aos-duration="1500"
-  >
-    <app-home-services></app-home-services>
-  </section>
-</main> -->
+<div class="container-about">
+  <div class="about-box">
+    <h3 class="about-tittle">Quem somos</h3>
+    <h1 class="about-subtittle">
+      Fundada em 2019, a Angular Money Group é uma empresa com ferramentas de
+      apoio a empresas.
+    </h1>
+    <h2 class="about-text">
+      Atualmente, somos uma equipe com mais de 20 desenvolvedores, com sede em
+      Uberlândia, atendemos clientes em todo o país.
+    </h2>
+    <button class="about-button">Entrar em contato</button>
+  </div>
+  <div class="about-box">
+    <img src="assets/svg/image-section.svg" alt="" />
+  </div>
+</div>
