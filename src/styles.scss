@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;900&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.btn-outline-info {
+  width: 125px;
+  height: 52px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 8.45882px;
+  margin-left: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+  cursor: pointer;
+  &:hover {
+    color: #ffffff;
+    background: #000000;
+    border: 2px solid #000000;
+  }
+}
+::ng-deep .btn-outline-primary {
+  width: 130px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  &:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #354739;
+    border: 2px solid #354739;
+  }
+}
+.btn-black {
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 155px;
+  height: 52px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  &:hover {
+    color: #000000;
+    background: #ffffff;
+    border: 2px solid #000000;
+  }
+}
+.btn-primary {
+  width: 130px;
+  height: 40px;
+  background-color: #000000;
+  border-color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+}
+.btn-white-mobile {
+  width: 210px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  &:hover {
+    background: #354739;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
+.btn-white {
+  width: 180px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  &:hover {
+    background: #354739;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+}
+.accordion-button {
+  position: inherit !important;
+}
+
+/*font implement*/
+
+/*variables*/
+:root {
+  /*principal colors*/
+  --primary-color: #354739;
+  --secondary-color: #ffffff;
+  /*buttons colors*/
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --green: #587b52;
+  /*fonts*/
+}
+/*global settings*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+body,
+html {
+  min-width: 375px;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation: fadeIn 2s ease-in-out;
+  -moz-animation: fadeIn 2s ease-in-out;
+  -o-animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
+}
+.baseline-button .btn-outline-primary,
+.btnHome {
+  width: 132px;
+  height: 35px;
+  border: 2px;
+  color: var(--first-white);
+  background-color: #587b52;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: 1s;
+  &:hover {
+    cursor: pointer;
+    background: white;
+    color: #587b52;
+    border: 2px solid #587b52;
+  }
+  &:active:focus {
+    box-shadow: none;
+  }
+}

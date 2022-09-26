@@ -1,0 +1,24 @@
+.baseboard {
+  background-color: #000000;
+  color: var(--white);
+  padding-bottom: 20px;
+  width: 100%;
+  padding-top: 30px;
+
+  .default-container {
+    padding: 0% 5%;
+    margin: 0 auto;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-around;
+    gap: 50%;
+  }
+}
+
+.logo {
+  width: 90px;
+}
+.baseboard-button {
+  display: flex;
+  justify-content: end;
+}
