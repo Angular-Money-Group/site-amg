@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@400;900&display=swap");
 
+.fundo-branco{
+  width: 100%;
+  height: 600px;
+}
 
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   font-family: "Inter", sans-serif;
 }
 .btn-outline-info {
