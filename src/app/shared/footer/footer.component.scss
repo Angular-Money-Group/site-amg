@@ -1,6 +1,6 @@
 .baseboard {
   background-color: #000000;
-  color: var(--white);
+  color: white;
   padding-bottom: 20px;
   width: 100%;
   padding-top: 30px;
@@ -14,8 +14,26 @@
     gap: 50%;
   }
 }
+.black-box{
+  width: 100%;
+  background: #141414;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  color: #587b52;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 120%;
+  cursor: pointer;
+
+}
 
 .logo {
+  cursor: pointer;
   width: 90px;
 }
 .baseboard-button {

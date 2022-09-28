@@ -10,10 +10,30 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+
   }
 
 
-  isHomeRoute() {
+
+
+  isHome() {
     return this.router.url === '/home';
   }
+
+  isAbout() {
+    return this.router.url === '/about-us';
+  }
+  isContact() {
+    return this.router.url === '/contact-us';
+  }
+  isHiring() {
+    return this.router.url === '/hiring';
+  }
+  isSolutions() {
+    return this.router.url === '/solutions';
+  }
+
+
+
 }
