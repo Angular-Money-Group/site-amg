@@ -8,10 +8,56 @@
     display: flex;
     flex-direction: column;
     }
-    .top-text{
+.top-text{
      display: flex;
       align-items: flex-start;
-    }
+}
+.big-g-text{
+  font-family:'Syne', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 120%;
+color: #3A5237;
+}
+.contact-button {
+  width: 190px;
+  height: 50px;
+  border: 2px solid transparent;
+  color: white;
+  background-image: url("/assets/arrow_forward.svg");
+  background-repeat: no-repeat;
+  background-position: 93% 50%;
+  background-color: #587b52;
+  font-family:  'Albert Sans', sans-serif;;
+  border-radius: 12px;
+  transition: 1s;
+  padding-right: 15px;
+  margin-left: 30%;
+  margin-top: 5%;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #587b52;
+    background: white;
+    color: #587b52;
+  background-image: url("/assets/arrow_forward_green.svg");
+    background-repeat: no-repeat;
+    background-position: 93% 50%;
+    background-size: auto;
+  }
+  &:active:focus {
+    box-shadow: none;
+  }
+}
+.background-layout{
+  background-image:url("/assets/svg/background-hiring.svg");
+  width: 100%;
+  height: 538px;
+  top: 0px;
+  left: 0px;
+  position: relative;
+
+}
   .bold-tittle{
     margin-left: 5%;
     font-style: normal;
