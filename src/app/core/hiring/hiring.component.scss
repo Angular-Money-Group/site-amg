@@ -155,3 +155,79 @@ height: 150px;
     color: #333333;
 
     }
+    @media screen and (max-width: 1024px){
+      .center-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 2%;
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      .hiring-g-text{
+        width: 525px;
+        left: 308px;
+        top: 388px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 120%;
+        text-align: center;
+        color: #3A5237;
+        }
+        .hiring-text{
+          width: 525px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 120%;
+          text-align: center;
+          color: #333333;
+        }
+        .hiring-text-top{
+          width: 525px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+
+          height: 50px;
+          color: #333333;
+        }
+
+
+    }
+
+    @media screen and (max-width: 568px){
+      .hiring-g-text{
+        width: 325px;
+        left: 308px;
+        top: 388px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 120%;
+        text-align: center;
+        color: #3A5237;
+        }
+        .hiring-text{
+          width: 325px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 120%;
+          text-align: center;
+          color: #333333;
+        }
+        .hiring-text-top{
+          width: 325px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+
+          height: 50px;
+          color: #333333;
+        }
+
+    }

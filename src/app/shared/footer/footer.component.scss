@@ -40,3 +40,13 @@
   display: flex;
   justify-content: end;
 }
+@media screen and (max-width: 500px){
+
+  .content{
+    flex-direction: column;
+    span{
+      padding: 2%;
+
+    }
+  }
+}

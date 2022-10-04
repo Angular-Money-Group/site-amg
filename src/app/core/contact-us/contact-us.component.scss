@@ -127,3 +127,42 @@ padding-left: 10%;
 
   width: 440px;
 }
+
+@media screen and (max-width: 900px){
+  .container-contact{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+@media screen and (max-width: 600px){
+
+.mail-box{
+  width: 400px;
+  margin-left: 5%;
+}
+.number-box{
+  width: 400px;
+  margin-left: 5%;
+}
+.comment-box{
+  margin-left: 5%;
+  width: 400px;
+}
+}
+
+@media screen and (max-width: 500px){
+
+  .mail-box{
+    width: 300px;
+    margin-left: 5%;
+  }
+  .number-box{
+    width: 300px;
+    margin-left: 5%;
+  }
+  .comment-box{
+    margin-left: 5%;
+    width: 300px;
+  }
+  }
