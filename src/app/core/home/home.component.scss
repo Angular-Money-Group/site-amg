@@ -285,11 +285,12 @@ gap: 17px;
      width: 712px;
      height: 110px;
      resize: none;
-&:focus{
-  outline: none;
-  border: 1px solid #a0d18c;
-  color: #587b52;
-}
+     padding: 1%;
+  &:focus{
+    outline: none;
+    border: 1px solid #a0d18c;
+    color: #587b52;
+  }
 }
 
 .sustentability-button {
