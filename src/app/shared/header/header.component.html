@@ -1,7 +1,8 @@
 <header [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
   <div class="baseline-content">
     <div class="baseline-logo">
-      <a routerLink="/home" *ngIf="isHome(); else blacklogo" > <img class="header-logo" src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
+      <a routerLink="/home" *ngIf="isHome(); else blacklogo" >
+        <img class="header-logo" src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
       <ng-template #blacklogo>
         <div class="baseline-logo">
         <a routerLink="/home"><img class="header-logo" src="../../assets/svg/LOGO 5.svg" alt="Amg Logo" /></a>
@@ -19,7 +20,12 @@
 
             <span [routerLink]="['/solutions']"  [ngClass]="isSolutions() ? 'baseline-black-bold' : 'baseline-menu'">
               Soluções
-              <img src="../../assets/svg/arrow_down.svg" alt="" /> </span>
+
+              <img src="../../assets/svg/arrow_down.svg" *ngIf="isHome(); else blackarrow" />
+              <ng-template #blackarrow>
+                <img class="header-logo" src="../../assets/svg/arrow_down_black.svg" alt="Amg Logo"/>
+              </ng-template>
+              </span>
 
               <span [routerLink]="['/hiring']"  [ngClass]="isHiring() ? 'baseline-black-bold' : 'baseline-menu'">Trabalhe Conosco</span>
         </nav>
