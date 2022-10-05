@@ -32,11 +32,13 @@
 
 }
 
-.logo {
+.baseboard-logo {
   cursor: pointer;
   width: 90px;
+
 }
 .baseboard-button {
+
   display: flex;
   justify-content: end;
 }
@@ -48,5 +50,11 @@
       padding: 2%;
 
     }
+  }
+  .baseboard-logo{
+    padding-left: 25%;
+  }
+  .baseboard-button{
+    padding-right: 25%;
   }
 }

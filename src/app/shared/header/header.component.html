@@ -1,10 +1,10 @@
 <header [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
   <div class="baseline-content">
     <div class="baseline-logo">
-      <a routerLink="/home" *ngIf="isHome(); else blacklogo" > <img src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
+      <a routerLink="/home" *ngIf="isHome(); else blacklogo" > <img class="header-logo" src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
       <ng-template #blacklogo>
         <div class="baseline-logo">
-        <a routerLink="/home"><img src="../../assets/svg/LOGO 5.svg" alt="Amg Logo" /></a>
+        <a routerLink="/home"><img class="header-logo" src="../../assets/svg/LOGO 5.svg" alt="Amg Logo" /></a>
       </div>
           </ng-template>
     </div>

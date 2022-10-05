@@ -346,8 +346,10 @@ background: #FFFFFF;
   }
 
 }
-@media screen and (max-width: 768px){
-
+@media screen and (max-width: 767px){
+  .background-gradient{
+    background-image: linear-gradient(to right, #000000cc, transparent),url("/assets/svg/Background-Image-2.svg");
+  }
   .container-about{
     width: 600px;
     flex-direction: column-reverse;
@@ -373,7 +375,10 @@ background: #FFFFFF;
 }
 
 }
-@media screen and (max-width: 568px){
+@media screen and (max-width: 545px){
+  .background-gradient{
+    background-image: linear-gradient(to right, #000000cc, transparent),url("/assets/svg/Background-Image-3.svg");
+  }
   .container-contact{
     left: 50px;
     grid-template-columns: 60% 40%;
@@ -408,11 +413,28 @@ background: #FFFFFF;
 }
 
 }
-@media screen and (max-width: 400px){
- .comments-text{
+@media screen and (max-width: 450px){
+
+  .about-box{
+    gap:0;
+  }
+  .about-subtittle{
+    width: 330px;
+  }
+  .about-text{
+    width: 300px;
+  }
+  .comments-text{
   width: 250px;
+}
+.comments-subtittle{
+  width: 300px;
 }
 .container-about{
   gap:0;
+}
+.sustentability-button{
+  margin-left: 35%;
+  height: 65px;
 }
 }
