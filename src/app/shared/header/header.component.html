@@ -9,7 +9,9 @@
       </div>
           </ng-template>
     </div>
-
+<div class="navbar-mobile">
+  <img class="navbar-icon" src="../../assets/svg/navbar.svg" alt="">
+</div>
 
     <div class="baseline-center">
       <div class="baseline-menu">
@@ -28,11 +30,13 @@
               </span>
 
               <span [routerLink]="['/hiring']"  [ngClass]="isHiring() ? 'baseline-black-bold' : 'baseline-menu'">Trabalhe Conosco</span>
-        </nav>
+
+              <div class="baseline-button">
+                <button  [routerLink]="['/contact-us']" type="button" class="btnHome">Contato</button>
+              </div>
+            </nav>
       </div>
-      <div class="baseline-button">
-        <button  [routerLink]="['/contact-us']" type="button" class="btnHome">Contato</button>
-      </div>
+
 
     </div>
 
