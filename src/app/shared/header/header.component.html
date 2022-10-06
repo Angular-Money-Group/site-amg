@@ -1,4 +1,4 @@
-<header [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
+<header  [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
   <div class="baseline-content">
     <div class="baseline-logo">
       <a routerLink="/home" *ngIf="isHome(); else blacklogo" >
@@ -9,14 +9,17 @@
       </div>
           </ng-template>
     </div>
-<div class="navbar-mobile">
-  <img class="navbar-icon" src="../../assets/svg/navbar.svg" alt="">
-</div>
+
+    <div class="navbar-mobile">
+      <img class="navbar-icon" src="../../assets/svg/navbar.svg" (click)="isMenuOpen = !isMenuOpen" />
+    </div>
 
     <div class="baseline-center">
       <div class="baseline-menu">
 
-        <nav>
+        <nav [class.is-open]="isMenuOpen">
+
+
           <span [ngClass]="isAbout() ? 'baseline-black-bold' : 'baseline-menu'"  [routerLink]="['/about-us']">
             Sobre AMG</span>
 
@@ -30,34 +33,17 @@
               </span>
 
               <span [routerLink]="['/hiring']"  [ngClass]="isHiring() ? 'baseline-black-bold' : 'baseline-menu'">Trabalhe Conosco</span>
-
               <div class="baseline-button">
                 <button  [routerLink]="['/contact-us']" type="button" class="btnHome">Contato</button>
               </div>
             </nav>
+
       </div>
 
 
     </div>
 
-    <!-- <div class="mobile">
-      <div class="icon-mobile">
-        <div class="icon" (click)="hideShow()">
-          <i [ngClass]="showMenu ? 'bi bi-x' : 'bi bi-list'"></i>
-        </div>
-      </div>
-    </div> -->
+
   </div>
 </header>
-<!-- <div class="content-mobile" *ngIf="showMenu === true">
-  <div class="menu-mobile">
-    <nav class="menu">
-      <span (click)="goTo(item.route)" *ngFor="let item of menu">
-        {{ item.name }}</span
-      >
-    </nav>
-    <div class="mobile-button">
-      <button type="button" class="btn btn-white-mobile">Contato</button>
-    </div>
-  </div>
-</div> -->
+
