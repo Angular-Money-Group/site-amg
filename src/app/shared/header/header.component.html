@@ -1,4 +1,5 @@
-<!-- <header  [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
+<header  [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
+ <div class="container-header">
   <div class="baseline-content">
     <div class="baseline-logo">
       <a routerLink="/home" *ngIf="isHome(); else blacklogo" >
@@ -13,12 +14,12 @@
     <div class="navbar-mobile">
       <div class="navbar-color" *ngIf="isHome(); else blacknavbar">
       <img class="navbar-icon" src="../../assets/svg/navbar_white.svg"(click)="collapse.toggle()"
-      [attr.aria-expanded]="!gfg"
+      [attr.aria-expanded]="!menuOpen"
       aria-controls="collapseExample" />
       </div>
       <ng-template #blacknavbar>
         <img class="navbar-icon" src="../../assets/svg/navbar.svg"(click)="collapse.toggle()"
-        [attr.aria-expanded]="!gfg"
+        [attr.aria-expanded]="!menuOpen"
         aria-controls="collapseExample" />
       </ng-template>
     </div>
@@ -26,9 +27,7 @@
     <div class="baseline-center">
       <div class="baseline-menu">
 
-        <nav [class.is-open]="isMenuOpen">
-
-
+        <nav>
           <span [ngClass]="isAbout() ? 'baseline-black-bold' : 'baseline-menu'"  [routerLink]="['/about-us']">
             Sobre AMG</span>
 
@@ -55,65 +54,20 @@
 
   </div>
 
-</header>
-<div #collapse="ngbCollapse"
-     [(ngbCollapse)]="gfg">
+
+  <div #collapse="ngbCollapse"
+     [(ngbCollapse)]="menuOpen">
   <div class="card">
     <div class="card-body">
-      Angular10 ng bootstrap
+      <ul class="slide">
+        <li class="slide-item" ><a class="navbar-text" [routerLink]="'/about-us'" (click)="menuOpen = true">Sobre AMG</a></li>
+        <li class="slide-item"><a class="navbar-text" [routerLink]="'/solutions'" (click)="menuOpen = true">Soluções</a></li>
+        <li class="slide-item"><a class="navbar-text" [routerLink]="'/hiring'"(click)="menuOpen = true">Trabalhe Conosco</a></li>
+        <li class="slide-item"><a class="navbar-text" [routerLink]="'/contact-us'"(click)="menuOpen = true">Contato</a></li>
+      </ul>
     </div>
   </div>
-</div> -->
+</div>
 
- <header>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <div class="container-fluid">
-      <a class="navbar-brand" [routerLink]="['/home']">
-        <a [routerLink]="'/home'" *ngIf="isHome(); else blacklogo" >
-          <img class="header-logo" src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
-        <ng-template #blacklogo>
-          <div class="baseline-logo">
-            <a [routerLink]="'/home'"><img class="header-logo" src="../../assets/svg/LOGO 5.svg" alt="Amg Logo" /></a>
-          </div>
-        </ng-template>
-
-      </a>
-
-
-      <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
-        &#9776;
-      </button>
-
-
-      <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-
-            <a class="nav-link" [routerLink]="'/about-us'" (click)="isMenuCollapsed = true">Sobre AMG</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/solutions'" (click)="isMenuCollapsed = true">Soluções
-              <img src="../../assets/svg/arrow_down.svg" *ngIf="isHome(); else blackarrow" />
-              <ng-template #blackarrow>
-                <img class="header-logo" src="../../assets/svg/arrow_down_black.svg" alt="Amg Logo"/>
-              </ng-template>
-
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="'/hiring'" (click)="isMenuCollapsed = true">Trabalhe Conosco</a>
-          </li>
-          <li class="nav-item">
-            <div class="baseline-button">
-              <button  [routerLink]="['/contact-us']" type="button" class="btnHome">Contato</button>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+</div>
 </header>
-

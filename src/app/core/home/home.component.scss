@@ -7,10 +7,11 @@ align-items: center;
 .background-gradient {
   background-image: linear-gradient(to right, #000000cc, transparent),url("/assets/svg/Background-Image.svg");
   width: 100%;
+  background-repeat:no-repeat;
   position: relative;
   top: 0px;
   left: 0px;
-  height: 600px;
+  height: 600px!important;
 }
 .container-contact {
   color: white;

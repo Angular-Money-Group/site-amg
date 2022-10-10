@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1440"
-   height="662"
-   viewBox="0 0 1440 662"
+   width="545.67633"
+   height="660.21674"
+   viewBox="0 0 545.67633 660.21674"
    fill="none"
    version="1.1"
    id="svg10"
@@ -40,7 +40,7 @@
      clip-path="url(#clipPath321)"
      x="0"
      y="0"
-     transform="translate(-893.41123)" />
+     transform="translate(-893.41125,-1.7832559)" />
   <defs
      id="defs8">
     <pattern
@@ -87,5 +87,5 @@
      width="693.68658"
      height="674.07074"
      x="747.18427"
-     y="-3.5665119" />
+     y="-5.3497677" />
 </svg>

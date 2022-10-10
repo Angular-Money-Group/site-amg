@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="1440"
-   height="662"
-   viewBox="0 0 1440 662"
+   width="767.71252"
+   height="659.80475"
+   viewBox="0 0 767.71252 659.80475"
    fill="none"
    version="1.1"
    id="svg10"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.56077199"
-     inkscape:cx="543.89307"
-     inkscape:cy="306.72002"
+     inkscape:cx="540.32656"
+     inkscape:cy="304.93677"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -40,7 +40,7 @@
      clip-path="url(#clipPath232)"
      x="0"
      y="0"
-     transform="translate(-668.72098)" />
+     transform="translate(-672.28748,-1.7832559)" />
   <defs
      id="defs8">
     <pattern
@@ -75,6 +75,6 @@
      id="rect170"
      width="693.68658"
      height="674.07074"
-     x="747.18427"
-     y="-3.5665119" />
+     x="743.6178"
+     y="-5.3497677" />
 </svg>

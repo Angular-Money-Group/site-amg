@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isMenuOpen = false;
-  public gfg = true;
-  public isMenuCollapsed = true;
+
+  public menuOpen = true;
+
 
 
   constructor(private router: Router) { }

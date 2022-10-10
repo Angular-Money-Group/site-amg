@@ -1,12 +1,11 @@
 .baseboard {
   background-color: #000000;
   color: white;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 20px;
 
   .default-container {
-    padding: 0% 5%;
     margin: 0 auto;
     max-width: 1920px;
     display: flex;
@@ -22,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2%;
+  padding: 1%;
   color: #587b52;
   margin: 5px;
   font-weight: 600;
@@ -43,7 +42,9 @@
   justify-content: end;
 }
 @media screen and (max-width: 500px){
-
+  .default-container {
+    padding: 0% 5%;
+  }
   .content{
     flex-direction: column;
     span{
