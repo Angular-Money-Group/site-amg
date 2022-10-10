@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../../shared/shared.module';
 import { RouterModule } from '@angular/router';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    NgbModule,
    ]
 })
 export class HomeModule { }

@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule, RouterState, Routes } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   { path:"", component: HeaderComponent }
 ];
@@ -19,6 +19,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule,
     RouterModule.forChild(routes),
+    NgbModule,
 
   ],
   exports:[

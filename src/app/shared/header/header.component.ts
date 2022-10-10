@@ -7,6 +7,10 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
+  public gfg = true;
+  public isMenuCollapsed = true;
+
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
