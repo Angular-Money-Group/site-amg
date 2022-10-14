@@ -24,6 +24,7 @@
   display: grid;
   grid-template-columns: 45% 45%;
 }
+
 .contact-box {
   font-family: "Albert Sans", sans-serif;
   padding: 10px;
@@ -322,6 +323,8 @@
   line-height: 120%;
   text-align: center;
 }
+
+
 @media screen and (max-width: 1024px) {
   .container-about {
     margin-left: 15%;
