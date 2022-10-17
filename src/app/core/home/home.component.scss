@@ -18,17 +18,17 @@
 .container-contact {
   color: white;
   position: relative;
-  width: 100%;
+  margin-right: auto;
   top: 150px;
   left: 150px;
-  display: grid;
-  grid-template-columns: 45% 45%;
+  width: 100%;
 }
 
 .contact-box {
   font-family: "Albert Sans", sans-serif;
   padding: 10px;
   color: var(--first-white);
+  width: 50%;
 }
 .contact-tittle {
   margin: 5px;
@@ -83,10 +83,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding:2%;
   gap: 18px;
-  width: 528px;
-  height: 306px;
+  width: 450px;
+  height: 490px;
 }
 .about-img {
   width: 418.61px;
@@ -351,10 +351,12 @@
   }
 
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .background-gradient {
-    background-image: linear-gradient(to right, #000000cc, transparent),
-      url("/assets/svg/Background-Image-2.svg");
+    background-position: 80% 40%;
+  }
+  .about-box{
+    height: 380px;
   }
   .container-about {
     width: 600px;
@@ -381,8 +383,7 @@
 }
 @media screen and (max-width: 545px) {
   .background-gradient {
-    background-image: linear-gradient(to right, #000000cc, transparent),
-      url("/assets/svg/Background-Image-3.svg");
+    background-position: 80% 40%;
   }
   .container-contact {
     left: 50px;
@@ -396,6 +397,7 @@
   }
   .about-box {
     width: 382px;
+    height: 340px;
   }
   .white-box {
     width: 310px;
@@ -421,11 +423,17 @@
   .about-box {
     gap: 0;
   }
+  .about-img{
+    width: 325px;
+  }
   .about-subtittle {
     width: 330px;
   }
   .about-text {
     width: 300px;
+  }
+  .container-sustentability{
+    padding: 0%;
   }
   .comments-text {
     width: 250px;
@@ -435,6 +443,9 @@
   }
   .container-about {
     gap: 0;
+  }
+  .comments-box{
+    width: 325px;
   }
   .sustentability-button {
     margin-left: 35%;

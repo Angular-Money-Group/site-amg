@@ -1,6 +1,6 @@
 <header  [ngClass]="isHome() ? 'baseline' : 'baseline-black'">
- <div class="container-header default-container">
-  <div class="baseline-content">
+ <div class="container-header">
+  <div class="baseline-content default-container">
     <div class="baseline-logo">
       <a routerLink="/home" *ngIf="isHome(); else blacklogo" >
         <img class="header-logo" src="../../assets/svg/LOGO 2.svg" alt="Amg Logo" /></a>
@@ -11,7 +11,7 @@
           </ng-template>
     </div>
 
-    <div class="navbar-mobile">
+    <div class="navbar-mobile ">
       <div class="navbar-color" *ngIf="isHome(); else blacknavbar">
       <img class="navbar-icon" src="../../assets/svg/navbar_white.svg"(click)="collapse.toggle()"
       [attr.aria-expanded]="!menuOpen"

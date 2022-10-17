@@ -167,6 +167,9 @@ height: 150px;
     }
 
     @media screen and (max-width: 768px){
+      .background-layout{
+        background-position: inherit;
+      }
       .hiring-g-text{
         width: 525px;
         left: 308px;
