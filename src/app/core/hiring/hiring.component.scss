@@ -80,7 +80,8 @@ height: 150px;
   top: 0px;
   left: 0px;
   position: relative;
-
+  background-size:cover;
+  background-position:center;
 }
 
   .center-text{
@@ -155,6 +156,116 @@ height: 150px;
     color: #333333;
 
     }
+
+    .container-contact{
+      display: flex;
+      flex-direction: row;
+      padding: 5%;
+    }
+    .about-tittle {
+      color: #587b52;
+      margin: 5px;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 120%;
+    }
+    .contact-box{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 500px;
+    width: 400px;
+    input{
+      margin-bottom: 10px;
+    }
+    }
+    .mail-box{
+      background: #FFFF;
+      width: 350px;
+      height: 56px;
+      color: #587b52;
+      border-radius: 12px;
+      border: 1px solid #587b52;
+      padding: 1%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 17px;
+      outline: none;
+      &:focus{
+        outline: none;
+        border: 1px solid #a0d18c;
+        color: #587b52;
+      }
+    }
+    .number-box{
+      background: #FFFF;
+      color: #587b52;
+      width: 350px;
+      height: 56px;
+      border-radius: 12px ;
+      border: 1px solid #587b52;
+      padding: 1%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 17px;
+      outline: none;
+      &:focus{
+        outline: none;
+        border: 1px solid #a0d18c;
+        color: #587b52;
+      }
+    }
+    .comment-box{
+      -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+         border-radius: 12px;
+         border: 1px solid #587b52;
+         color: #a0d18c;
+         width: 350px;
+         height: 160px;
+         resize: none;
+         padding: 1%;
+    &:focus{
+      outline: none;
+      border: 1px solid #a0d18c;
+      color: #587b52;
+    }
+    }
+    .curriculum-button {
+      width: 190px;
+      height: 50px;
+      border: 2px solid transparent;
+      color: white;
+
+      background-color: #587b52;
+      font-family: 'Albert Sans', sans-serif;
+      border-radius: 12px;
+      transition: 1s;
+      padding-right: 15px;
+      margin-left: 30%;
+      margin-top: 1%;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #587b52;
+        background: white;
+        color: #587b52;
+
+        background-size: auto;
+      }
+      &:active:focus {
+        box-shadow: none;
+      }
+    }
+    .contact-image{
+
+      width: 440px;
+    }
+    .validate-msg{
+      color: red;
+    }
+
     @media screen and (max-width: 1024px){
       .center-text{
         display: flex;
@@ -164,8 +275,18 @@ height: 150px;
         padding: 2%;
       }
     }
+    @media screen and (max-width: 900px){
+      .container-contact{
+        display: flex;
+        flex-direction: column;
+      }
+
+    }
 
     @media screen and (max-width: 768px){
+      .background-layout{
+        background-position: inherit;
+      }
       .hiring-g-text{
         width: 525px;
         left: 308px;
@@ -195,7 +316,18 @@ height: 150px;
           height: 50px;
           color: #333333;
         }
+        .mail-box{
+          width: 400px;
 
+        }
+        .number-box{
+          width: 400px;
+
+        }
+        .comment-box{
+
+          width: 400px;
+        }
 
     }
 
@@ -229,5 +361,22 @@ height: 150px;
           height: 50px;
           color: #333333;
         }
-
+        .mail-box{
+          width: 300px;
+          margin-left: 5%;
+        }
+        .number-box{
+          width: 300px;
+          margin-left: 5%;
+        }
+        .comment-box{
+          margin-left: 5%;
+          width: 300px;
+        }
+        .contact-image{
+          width: 340px;
+        }
+        .contact-box{
+          height: 430px;
+        }
     }

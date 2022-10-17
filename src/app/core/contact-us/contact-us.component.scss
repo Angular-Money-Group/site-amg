@@ -23,6 +23,7 @@
 .container-contact{
   display: flex;
   flex-direction: row;
+  padding: 5%;
 }
 .about-tittle {
   color: #587b52;
@@ -36,13 +37,14 @@ display: flex;
 flex-direction: column;
 background: white;
 height: 500px;
-gap: 10px;
-padding-left: 10%;
-
+width: 400px;
+input{
+  margin-bottom: 10px;
+}
 }
 .mail-box{
   background: #FFFF;
-  width: 528px;
+  width: 350px;
   height: 56px;
   color: #587b52;
   border-radius: 12px;
@@ -62,7 +64,7 @@ padding-left: 10%;
 .number-box{
   background: #FFFF;
   color: #587b52;
-  width: 528px;
+  width: 350px;
   height: 56px;
   border-radius: 12px ;
   border: 1px solid #587b52;
@@ -84,7 +86,7 @@ padding-left: 10%;
      border-radius: 12px;
      border: 1px solid #587b52;
      color: #a0d18c;
-     width: 528px;
+     width: 350px;
      height: 160px;
      resize: none;
      padding: 1%;
@@ -127,6 +129,9 @@ padding-left: 10%;
 
   width: 440px;
 }
+.validate-msg{
+  color: red;
+}
 
 @media screen and (max-width: 900px){
   .container-contact{
@@ -139,14 +144,14 @@ padding-left: 10%;
 
 .mail-box{
   width: 400px;
-  margin-left: 5%;
+
 }
 .number-box{
   width: 400px;
-  margin-left: 5%;
+
 }
 .comment-box{
-  margin-left: 5%;
+
   width: 400px;
 }
 }

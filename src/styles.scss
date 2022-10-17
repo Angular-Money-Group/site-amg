@@ -11,107 +11,15 @@
   border: 0;
   font-family:  'Albert Sans', sans-serif;
 }
-.btn-outline-info {
-  width: 125px;
-  height: 52px;
-  border: 2px solid #000000;
-  border-radius: 10px;
-  background: #ffffff;
-  border-radius: 8.45882px;
-  margin-left: 25px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  color: #000000;
-  cursor: pointer;
-  &:hover {
-    color: #ffffff;
-    background: #000000;
-    border: 2px solid #000000;
-  }
+.default-container{
+  max-width: 1280px;
+  margin: 0 auto;
 }
-::ng-deep .btn-outline-primary {
-  width: 130px;
-  height: 40px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  background-color: transparent;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  &:hover {
-    cursor: pointer;
-    background: #ffffff;
-    color: #354739;
-    border: 2px solid #354739;
-  }
+.display-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.btn-black {
-  background: #000000;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  width: 155px;
-  height: 52px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  color: #ffffff;
-  cursor: pointer;
-  &:hover {
-    color: #000000;
-    background: #ffffff;
-    border: 2px solid #000000;
-  }
-}
-.btn-primary {
-  width: 130px;
-  height: 40px;
-  background-color: #000000;
-  border-color: #ffffff;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  &:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000;
-  }
-}
-.btn-white-mobile {
-  width: 210px;
-  height: 60px;
-  background: #ffffff;
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  &:hover {
-    background: #354739;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-  }
-}
-.btn-white {
-  width: 180px;
-  height: 45px;
-  background: #ffffff;
-  border-radius: 10px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  &:hover {
-    background: #354739;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-  }
-}
-.accordion-button {
-  position: inherit !important;
-}
-
-/*font implement*/
-
-/*variables*/
 :root {
   /*principal colors*/
   --primary-color: #354739;
@@ -123,12 +31,25 @@
   --green: #587b52;
   /*fonts*/
 }
-/*global settings*/
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+
+.button-template {
+  border: 2px solid transparent;
+  color: white;
+  background-color: #587b52;
+  font-family: "Albert Sans", sans-serif;
+  border-radius: 12px;
+  transition: 1s;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #587b52;
+    background: white;
+    color: #587b52;
+  }
+  &:active:focus {
+    box-shadow: none;
+  }
 }
+
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 body,

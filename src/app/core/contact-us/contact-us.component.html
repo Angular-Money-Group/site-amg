@@ -1,5 +1,5 @@
 <div class="top-background"></div>
-<div class="container-background">
+<div class="container-background default-container">
   <div class="background-layout">
   <div class="top-text">
     <h1 class="bold-tittle">
@@ -7,14 +7,21 @@
     </h1>
   </div>
   <div class="container-contact">
-  <div class="contact-box">
-  <h1 class="about-tittle">Contato</h1>
-  <input maxlength="40"  type="email" class="mail-box" name="" id="" placeholder="email@seudominio.com.br">
-    <input  maxlength="14"  type="tel" class="number-box" name="" id="" placeholder="(00)00000-0000">
-  <textarea class="comment-box"  maxlength="300" type="text" placeholder="Descreva aqui sua mensagem..."></textarea>
-  <button class="contact-button">Entrar em contato</button>
+    <div class="contact-box default-container">
+  <form class="needs-validation" [formGroup]="contactForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+
+    <h1 class="about-tittle">Contato</h1>
+    <input formControlName="email" maxlength="50"  type="email" class="mail-box" name="" id="" placeholder="email@seudominio.com.br" required>
+    <div class="validate-msg"><span *ngIf="submitted && email.invalid" >Insira um email válido</span></div>
+    <input formControlName="phoneNumber"  maxlength="14"  type="tel" class="number-box" name="" id="" placeholder="(00)00000-0000" mask="(00)00000-0000" required>
+    <div class="validate-msg"><span *ngIf="submitted && phoneNumber.invalid">Insira um número válido para contato</span></div>
+    <textarea formControlName="message" class="comment-box"  maxlength="300" type="text" placeholder="Descreva aqui sua mensagem..." required></textarea>
+    <div class="validate-msg"><span *ngIf="submitted && message.invalid">Insira uma mensagem</span></div>
+    <input type="submit" class="contact-button" value="Entrar em contato">
+
+  </form>
 </div>
-<div class="contact-box">
+<div class="contact-box default-container">
   <img class="contact-image" src="assets/svg/contact-image.svg" alt="">
 </div>
 </div>

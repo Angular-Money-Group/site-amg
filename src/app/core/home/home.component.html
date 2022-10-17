@@ -1,7 +1,6 @@
-
 <div class="top">
   <div class="background-gradient">
-    <div class="container-contact">
+    <div class="container-contact default-container">
       <div class="contact-box">
         <h1 class="contact-tittle">
           Construindo o futuro através da tecnologia e inovação
@@ -9,98 +8,106 @@
         <h2 class="contact-text">
           Conectamos sua empresa com o mundo da tecnologia em tempo hábil.
         </h2>
-        <button class="contact-button">Entrar em contato</button>
+        <button class="button-template contact-button" (click)="defaultService.backToTop()" [routerLink]="'/contact-us'">Entrar em contato</button>
       </div>
       <div class="contact-box"></div>
     </div>
   </div>
 </div>
 <div class="background-about">
-<div class="container-about">
-  <div class="about-box">
-    <h3 class="about-tittle">Quem somos</h3>
-    <h1 class="about-subtittle">
-      Fundada em 2019, a Angular Money Group é uma empresa com ferramentas de
-      apoio a empresas.
-    </h1>
-    <h2 class="about-text">
-      Atualmente, somos uma equipe com mais de 20 desenvolvedores, com sede em
-      Uberlândia, atendemos clientes em todo o país.
-    </h2>
-    <button class="about-button">Sobre nós </button>
+  <div class="container-about default-container">
+    <div class="about-box">
+      <h3 class="about-tittle">Quem somos</h3>
+      <h1 class="about-subtittle">
+        Fundada em 2019, a Angular Money Group é uma empresa com ferramentas de
+        apoio a empresas.
+      </h1>
+      <h2 class="about-text">
+        Atualmente, somos uma equipe com mais de 20 desenvolvedores, com sede em
+        Uberlândia, atendemos clientes em todo o país.
+      </h2>
+      <button class="button-template about-button" (click)="defaultService.backToTop()" [routerLink]="'/about-us'">Sobre nós</button>
+    </div>
+    <div class="about-box">
+      <img class="about-img" src="assets/svg/image-section.svg" alt="" />
+    </div>
   </div>
-  <div class="about-box">
-    <img class="about-img" src="assets/svg/image-section.svg" alt="" />
-  </div>
-</div>
 </div>
 <!-- <div class="partners">
   <h1 class="about-tittle">Rede de Parceiros</h1>
 </div> -->
 <div class="container-g">
-<div class="container-hiring">
+  <div class="container-hiring">
+<div class="default-container">
+      <h1 class="hiring-tittle">Trabalhe Conosco</h1>
+      <div class="boxes">
+        <div class="white-box">
+          <img src="assets/svg/Potencial.svg" alt="" />
+          <h1 class="hiring-subtittle">Potencial de crescimento.</h1>
+          <h2 class="hiring-text">
+            Acreditamos que somos uma empresa com grande potencial de crescimento
+            no mercado, oferecendo desenvolvedores, equipes e soluções para as
+            necessidades de cada cliente
+          </h2>
+        </div>
+        <div class="white-box">
+          <img src="assets/svg/Pessoas.svg" alt="" />
+          <h1 class="hiring-subtittle">Feita de pessoas.</h1>
+          <h2 class="hiring-text">
+            Se todos estiverem bem, com equilíbrio entre a vida pessoal e
+            profissional, criamos uma relação de proximidade em que todos saem
+            ganhando.
+          </h2>
+        </div>
+        <div class="white-box">
+          <img src="assets/svg/Apaixonados.svg" alt="" />
+          <h1 class="hiring-subtittle">Apaixonados pelo que fazemos.</h1>
+          <h2 class="hiring-text">
+            Aqui temos pessoas apaixonadas pelo que fazem, acreditando no
+            potencial de cada um da nossa equipe.
+          </h2>
+        </div>
+      </div>
+      <button class="button-template hiring-button" (click)="defaultService.backToTop()" [routerLink]="'/hiring'">Vagas disponiveis</button>
 
-  <h1 class="hiring-tittle">Trabalhe Conosco</h1>
-  <div class="boxes">
-    <div class="white-box">
-      <img src="assets/svg/Potencial.svg" alt="">
-      <h1 class="hiring-subtittle">
-
-        Potencial de crescimento.
-      </h1>
-      <h2 class="hiring-text">
-        Acreditamos que somos uma empresa com grande potencial de crescimento no mercado, oferecendo desenvolvedores, equipes e soluções para as necessidades de cada cliente
-      </h2>
-    </div>
-    <div class="white-box">
-      <img src="assets/svg/Pessoas.svg" alt="">
-      <h1 class="hiring-subtittle">
-        Feita de pessoas.
-      </h1>
-      <h2 class="hiring-text">
-        Se todos estiverem bem, com equilíbrio entre a vida pessoal e profissional, criamos uma relação de proximidade em que todos saem ganhando.
-      </h2>
-
-    </div>
-    <div class="white-box">
-      <img src="assets/svg/Apaixonados.svg" alt="">
-      <h1 class="hiring-subtittle">
-        Apaixonados pelo que fazemos.
-      </h1>
-      <h2 class="hiring-text">
-        Aqui temos pessoas apaixonadas pelo que fazem, acreditando no potencial de cada um da nossa equipe.
-      </h2>
-
-    </div>
-
-  </div>
-  <button class="hiring-button">Vagas disponiveis</button>
 </div>
+  </div>
 </div>
 
 <div class="container-sustentability">
-  <div class="topo">
-  <h1 class="sustentability-tittle">Sustentabilidade</h1>
-  <h1 class="sustentability-subtittle">Algumas Iniciativas:
-  </h1></div>
-  <div class="boxes">
-  <div class="sustentability-box">
-    <img class="sustentability-img" src="assets/svg/sustentability-1.svg" alt="">
+  <div class="default-container">
+    <div class="topo">
+      <h1 class="sustentability-tittle">Sustentabilidade</h1>
+      <h1 class="sustentability-subtittle">Algumas Iniciativas:</h1>
+    </div>
+    <div class="boxes">
+      <div class="sustentability-box">
+        <img
+          class="sustentability-img"
+          src="assets/svg/sustentability-1.svg"
+          alt=""
+        />
 
-    <h2 class="hiring-text">
-      Redução de 80% no uso de copos descartáveis, uma vez que todos os colaboradores utilizam o seu próprio copo para tomar água e café.
-    </h2>
+        <h2 class="hiring-text">
+          Redução de 80% no uso de copos descartáveis, uma vez que todos os
+          colaboradores utilizam o seu próprio copo para tomar água e café.
+        </h2>
+      </div>
+      <div class="sustentability-box">
+        <img
+          class="sustentability-img"
+          src="assets/svg/sustentability-2.svg"
+          alt=""
+        />
 
+        <h2 class="hiring-text">
+          Projetos sociais locais e nacionais, com apoio à ONGs, doações de
+          alimentos, ajuda de custo, disponibilização de sistema 100% gratuito e
+          ações em datas comemorativas, com diversas formas de doações.
+        </h2>
+      </div>
+    </div>
   </div>
-  <div class="sustentability-box">
-    <img class="sustentability-img" src="assets/svg/sustentability-2.svg" alt="">
-
-    <h2 class="hiring-text">
-      Projetos sociais locais e nacionais, com apoio à ONGs, doações de alimentos, ajuda de custo, disponibilização de sistema 100% gratuito e ações em datas comemorativas, com diversas formas de doações.
-    </h2>
-
-  </div>
-</div>
 </div>
 <!-- <div class="compliance">
   <h1 class="about-tittle">Compliance</h1>
@@ -109,19 +116,24 @@
   <h1 class="about-tittle">Este Canal está apto a receber</h1>
 </div> -->
 <div class="container-comments">
-<div class="comments-box">
-  <h1 class="about-tittle">
-    Por meio do menu abaixo você pode fazer seu relato ou sua sugestão.
-  </h1>
-  <h2 class="comments-subtittle">
-    Ainda, você pode utilizá-lo para obter mais informações, inclusive sobre a Contato Seguro, empresa que faz a gestão deste canal, garantindo seu anonimato.
-  </h2>
-  <textarea class="comments-text" maxlength="500" type="text" placeholder="Descreva aqui sua mensagem..."></textarea>
+<div class="default-container">
+    <div class="comments-box">
+      <h1 class="about-tittle">
+        Por meio do menu abaixo você pode fazer seu relato ou sua sugestão.
+      </h1>
+      <h2 class="comments-subtittle">
+        Ainda, você pode utilizá-lo para obter mais informações, inclusive sobre a
+        Contato Seguro, empresa que faz a gestão deste canal, garantindo seu
+        anonimato.
+      </h2>
+      <textarea
+        class="comments-text"
+        maxlength="500"
+        type="text"
+        placeholder="Descreva aqui sua mensagem..."
+      ></textarea>
 
-  <button class="sustentability-button">Enviar</button>
-
-
+      <button class="button-template sustentability-button">Enviar</button>
+    </div>
 </div>
 </div>
-
-

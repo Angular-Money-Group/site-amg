@@ -90,7 +90,7 @@
     top: 0;
     z-index: 5000;
     .baseline-content {
-      width: 95%;
+      width: 80%;
       display: flex;
       padding: 2%;
       .icon-mobile {
@@ -158,10 +158,17 @@
     margin-left: 5%;
   }
 
+.card{
+      display: none;
+    }
+
 
   @media screen and (max-width: 730px) {
+    .card{
+      display: flex;
+    }
     .navbar-mobile{
-      margin-left: 75%;
+      margin-left: 70%;
     }
     .navbar-icon{
       display: flex!important;
