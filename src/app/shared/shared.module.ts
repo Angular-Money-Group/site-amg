@@ -1,31 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { RouterModule, RouterState, Routes } from '@angular/router';
-import { AppRoutingModule } from '../app-routing.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-const routes: Routes = [
-  { path:"", component: HeaderComponent }
-];
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { DefaultButtonComponent } from './components/default-button/default-button.component';
+
 
 
 @NgModule({
   declarations: [
+    FooterComponent,
     HeaderComponent,
-    FooterComponent
+    ContactFormComponent,
+    DefaultButtonComponent
   ],
   imports: [
-    CommonModule,
-    RouterModule,
-    RouterModule.forChild(routes),
-    NgbModule,
-
+    CommonModule
   ],
-  exports:[
-    HeaderComponent,
+  exports: [
     FooterComponent,
-
+    HeaderComponent,
+    ContactFormComponent,
+    DefaultButtonComponent
   ]
 })
 export class SharedModule { }
