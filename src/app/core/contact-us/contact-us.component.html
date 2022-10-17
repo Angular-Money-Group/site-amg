@@ -11,10 +11,10 @@
   <form class="needs-validation" [formGroup]="contactForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
 
     <h1 class="about-tittle">Contato</h1>
-    <input formControlName="email" maxlength="40"  type="email" class="mail-box" name="" id="" placeholder="email@seudominio.com.br" required>
+    <input formControlName="email" maxlength="50"  type="email" class="mail-box" name="" id="" placeholder="email@seudominio.com.br" required>
     <div class="validate-msg"><span *ngIf="submitted && email.invalid" >Insira um email válido</span></div>
-    <input formControlName="phoneNumber"  maxlength="14"  type="tel" class="number-box" name="" id="" placeholder="(00)00000-0000" required>
-    <div class="validate-msg"><span *ngIf="submitted && phoneNumber.invalid">Insira um número para contato</span></div>
+    <input formControlName="phoneNumber"  maxlength="14"  type="tel" class="number-box" name="" id="" placeholder="(00)00000-0000" mask="(00)00000-0000" required>
+    <div class="validate-msg"><span *ngIf="submitted && phoneNumber.invalid">Insira um número válido para contato</span></div>
     <textarea formControlName="message" class="comment-box"  maxlength="300" type="text" placeholder="Descreva aqui sua mensagem..." required></textarea>
     <div class="validate-msg"><span *ngIf="submitted && message.invalid">Insira uma mensagem</span></div>
     <input type="submit" class="contact-button" value="Entrar em contato">

@@ -15,7 +15,7 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
     this.contactForm = new FormGroup({
     email: new FormControl('',[Validators.required,Validators.email] ),
-    phoneNumber:new FormControl('',[Validators.required,Validators.pattern('^1\d\d(\d\d)?$|^0800 ?\d{3} ?\d{4}$|^(\(0?([1-9a-zA-Z][0-9a-zA-Z])?[1-9]\d\) ?|0?([1-9a-zA-Z][0-9a-zA-Z])?[1-9]\d[ .-]?)?(9|9[ .-])?[2-9]\d{3}[ .-]?\d{4}$'),]),
+    phoneNumber:new FormControl('',[Validators.required,Validators.pattern('')]),
     message: new FormControl('',Validators.required),
   })
   }

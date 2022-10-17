@@ -46,6 +46,26 @@
 
             Projetos sociais locais e nacionais, com apoio à ONGs, doações de alimentos, ajuda de custo, disponibilização de sistema 100% gratuito e ações em datas comemorativas, com diversas formas de doações.</h3>
         </div>
-      <div class="fundo-branco"></div>
+        <div class="container-contact">
+          <div class="contact-box default-container">
+        <form class="needs-validation" [formGroup]="contactForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+
+          <h1 class="about-tittle">Envie seu curriculo</h1>
+          <input formControlName="email" maxlength="50"  type="email" class="mail-box" name="" id="" placeholder="email@seudominio.com.br" required>
+          <div class="validate-msg"><span *ngIf="submitted && email.invalid" >Insira um email válido</span></div>
+          <input formControlName="phoneNumber"  maxlength="14"  type="tel" class="number-box" name="" id="" placeholder="(00)00000-0000" mask="(00)00000-0000" required>
+          <div class="validate-msg"><span *ngIf="submitted && phoneNumber.invalid">Insira um número válido para contato</span></div>
+          <textarea formControlName="message" class="comment-box"  maxlength="300" type="text" placeholder="Descreva aqui sua mensagem..." required></textarea>
+          <div class="validate-msg"><span *ngIf="submitted && message.invalid">Insira uma mensagem</span></div>
+          <input class="" type="file" id="myfile" name="myfile">
+          <input type="submit" class="curriculum-button" value="Enviar">
+
+        </form>
+      </div>
+      <div class="contact-box default-container">
+        <img class="contact-image" src="assets/svg/hiring-1.svg" alt="">
+      </div>
+      </div>
+
 </div>
 </div>
