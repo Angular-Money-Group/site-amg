@@ -8,6 +8,7 @@ import { DefaultButtonComponent } from './components/default-button/default-butt
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { MessageStatusComponent } from './components/message-status/message-status.component';
+import { CurriculumFormComponent } from './components/curriculum-form/curriculum-form.component';
 
 
 
@@ -17,7 +18,8 @@ import { MessageStatusComponent } from './components/message-status/message-stat
     HeaderComponent,
     ContactFormComponent,
     DefaultButtonComponent,
-    MessageStatusComponent
+    MessageStatusComponent,
+    CurriculumFormComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { MessageStatusComponent } from './components/message-status/message-stat
     HeaderComponent,
     ContactFormComponent,
     DefaultButtonComponent,
-    MessageStatusComponent
+    MessageStatusComponent,
+    CurriculumFormComponent
   ]
 })
 export class SharedModule { }
