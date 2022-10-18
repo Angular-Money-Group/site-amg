@@ -10,7 +10,6 @@ export class DefaultButtonComponent implements OnInit {
   @Input() classes?:string = 'py-2 px-4'
   @Input() arrow?:boolean = false
   @Input() loading?:boolean = false
-
   constructor() { }
 
   ngOnInit(): void {
