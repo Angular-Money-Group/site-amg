@@ -1,21 +1,21 @@
 button{
-  background-color: #587B52;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
   border-radius: 12px;
   border: 1px solid transparent;
   &:hover{
-    background-color: white;
-    color: #587B52;
-    border: 1px solid #587B52;
+    background-color: var(--white);
+    color: var(--green);
+    border: 1px solid var(--green);
     transition: 1000ms;
     transform: scale(1.03);
     .arrow{
-      border: solid #587B52;
+      border: solid var(--green);
       border-width: 0 3px 3px 0;
       transition: 1000ms;
     }
     .reload{
-      border: 3px solid white;
+      border: 3px solid var(--white);
       border-top: 3px solid var(--green);
       transition: 1000ms;
     }
@@ -30,19 +30,19 @@ button{
 }
 
 .button-white{
-  background-color: #FFFF !important;
-  color: #587B52 !important;
+  background-color: var(--white) !important;
+  color: var(--green) !important;
   &:hover{
-    background-color: #587B52 !important;
-    border: 1px solid white !important;
-    color: #FFFF !important;
+    background-color: var(--green) !important;
+    border: 1px solid var(--white) !important;
+    color: var(--white) !important;
     transition: 1000ms !important;
     cursor: pointer !important;
   }
 }
 
 .arrow {
-  border: solid rgb(255, 255, 255);
+  border: solid var(--white);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -56,7 +56,7 @@ button{
 .reload{
   border: 3px solid var(--green);
   border-radius: 50%;
-  border-top: 3px solid white;
+  border-top: 3px solid var(--white);
   width: 15px;
   height: 15px;
   -webkit-animation: spin 1.3s linear infinite;
