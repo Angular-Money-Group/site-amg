@@ -1,21 +1,21 @@
 <form class="w-100" [formGroup]="curriculumForm">
 
   <div>
-    <input type="email" class=" w-100" placeholder="Nome" formControlName="name">
+    <input type="email" class=" w-100" placeholder="*Nome" formControlName="name">
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger" *ngIf="name.invalid && submitted">*Nome Inválido</span>
     </div>
   </div>
 
   <div>
-    <input type="email" class=" w-100" placeholder="Email" formControlName="email">
+    <input type="email" class=" w-100" placeholder="*E-mail" formControlName="email">
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger" *ngIf="email.invalid && submitted">*E-mail inválido</span>
     </div>
   </div>
 
   <div>
-    <input type="tel" class=" w-100" placeholder="Telefone (55)" mask="(00) 00000-0000" formControlName="phoneNumber">
+    <input type="tel" class=" w-100" placeholder="*Telefone (55)" mask="(00) 00000-0000" formControlName="phoneNumber">
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger" *ngIf="phoneNumber.invalid && submitted">*Número inválido</span>
     </div>
@@ -25,9 +25,12 @@
     <textarea name="" id="" cols="20" rows="10" maxlength="300" class=" w-100 mb-3" placeholder="Descreva aqui sua mensagem..." formControlName="message"></textarea>
   </div>
 
-  <div class="d-flex justify-content-center pb-4">
-    <label for="inputFile">Adicionar um Arquivo <span> - formatesk.csv</span></label>
-    <input id="inputFile" type="file" class="file" accept="image/png, image/jpeg, application/pdf" formControlName='file'>
+  <div class="d-flex justify-content-center align-items-center flex-column pb-4">
+    <label for="formFile">*Adicionar um Arquivo <span *ngIf="file"> - {{file?.name}} </span></label>
+    <input id="formFile" type="file" class="file" accept="image/png, image/jpeg, application/pdf" (change)="onFilechange($event)">
+    <div class="validation--box d-flex align-items-center justify-content-start ">
+      <span class="text-danger" *ngIf="!file && submitted">*Arquivo inválido</span>
+    </div>
   </div>
 
 

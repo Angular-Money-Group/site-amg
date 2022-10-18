@@ -1,14 +1,14 @@
 <form class="w-100" [formGroup]="contactForm">
 
   <div>
-    <input type="email" class="rounded w-100" placeholder="email@seudominio.com.br" formControlName="email">
+    <input type="email" class="rounded w-100" placeholder="*email@seudominio.com.br" formControlName="email">
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger" *ngIf="email.invalid && submitted">*E-mail inválido</span>
     </div>
   </div>
 
   <div>
-    <input type="tel" class="rounded w-100" placeholder="(00) 00000-0000" mask="(00) 00000-0000" formControlName="phoneNumber">
+    <input type="tel" class="rounded w-100" placeholder="*(00) 00000-0000" mask="(00) 00000-0000" formControlName="phoneNumber">
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger" *ngIf="phoneNumber.invalid && submitted">*Número inválido</span>
     </div>
@@ -30,8 +30,9 @@
 </form>
 
 <app-message-status
-[showMessage]="showMessage"
-[text]="'Mensagem enviada com sucesso!'"
-[title]="'Enviado'"
-[type]="'success'"
-(modalClosed)="showMessage = false"></app-message-status>
+  [showMessage]="showMessage"
+  [text]="'Mensagem enviada com sucesso!'"
+  [title]="'Enviado'"
+  [type]="'success'"
+  (modalClosed)="showMessage = false"
+></app-message-status>
