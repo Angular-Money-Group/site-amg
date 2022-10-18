@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,10 @@ export class AppComponent {
     {route: '/trabalhe-conosco', name: 'Trabalhe Conosco'},
     {route: '/contato', name: 'Contato'}
   ]
+
+  ngOnInit(){
+    AOS.init({
+      once: true
+    })
+  }
 }
