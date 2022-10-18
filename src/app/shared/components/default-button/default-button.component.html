@@ -1,1 +1,6 @@
-<button [class]="classes">{{label}} <i *ngIf="arrow" class="arrow right"></i></button>
+<button
+  [class]="classes" class="d-flex align-items-center">
+  <div class="reload"*ngIf="loading"></div>
+  <span class="px-2">{{label}}</span>
+  <i *ngIf="arrow" class="arrow right m-auto"></i>
+</button>

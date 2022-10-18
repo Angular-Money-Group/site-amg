@@ -11,7 +11,7 @@
         <img src="../../../../assets/svg/LOGO 5.svg" width="90" alt="" />
       </div>
       <div class="menu">
-        <nav class="menu--nav">
+        <nav class="menu--nav d-flex">
           <span class="px-3" *ngFor="let item of menu">
             <a
               *ngIf="item.name !== 'Contato' && item.name !== 'Início'"
@@ -31,6 +31,7 @@
               *ngIf="item.name == 'Soluções'"
               [ngClass]="{ 'arrow-black': router.url !== '/home' }"
             ></div> -->
+
           </span>
 
           <app-default-button
