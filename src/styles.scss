@@ -54,13 +54,31 @@ html{
     font-size: 16px;
     color: #545454;
   }
+  &__bold{
+    font-weight: 600;
+    font-size: 22px;
+    color: #000000;
+  }
+  &__opc-title{
+    font-weight: 600;
+    font-size: 28px;
+    color: #3A5237;
+  }
   &__green{
     font-weight: 600;
     font-size: 24px;
     color: #587B52;
   }
 }
-
+.pag{
+  width: 100vw;
+  height: auto;
+  &__center{
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1444px;
+  }
+}
 .default-container{
   max-width: 1444px;
   width: 75%;
