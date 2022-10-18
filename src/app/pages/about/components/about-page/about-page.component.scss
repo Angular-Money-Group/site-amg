@@ -1,0 +1,8 @@
+.box{
+  &__attr{
+    width: 25%;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
