@@ -14,7 +14,7 @@
         <nav class="menu--nav">
           <span class="px-3" *ngFor="let item of menu">
             <a
-              *ngIf="item.name !== 'Contato'"
+              *ngIf="item.name !== 'Contato' && item.name !== 'Início'"
               class="text-decoration-none py-2 px-1"
               [routerLink]="[item.route]"
               [ngClass]="
@@ -88,7 +88,8 @@
       class="text-decoration-none py-2"
       routerLink="{{item.route}}"
       (click)="toggle = !toggle">
-      <a>{{item.name}}</a>
+      <a
+      *ngIf="item.name !== 'Início'">{{item.name}}</a>
     </div>
     </div>
   </div>

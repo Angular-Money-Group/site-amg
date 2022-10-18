@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  menu: any[] = [
-    {route: '/sobre', name: 'Sobre AMG'},
-    {route: '/solucoes', name: 'Soluções'},
-    {route: '/trabalhe-conosco', name: 'Trabalhe Conosco'},
-    {route: '/contato', name: 'Contato'}
-  ]
+ @Input() menu!:any[]
   toggle:boolean = false
 
   constructor(
