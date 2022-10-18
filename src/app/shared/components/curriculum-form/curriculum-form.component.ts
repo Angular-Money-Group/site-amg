@@ -13,8 +13,8 @@ export class CurriculumFormComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     phoneNumber: new FormControl('', Validators.required),
     message: new FormControl(''),
-    file: new FormControl(null, [Validators.required])
   })
+  file:any = null
 
   submitted:boolean = false;
   showMessage:boolean = false;
@@ -42,10 +42,14 @@ export class CurriculumFormComponent implements OnInit {
     return this.curriculumForm.get('message')!
   }
 
+  onFilechange(event:any){
+    this.file = event.target.files[0]
+  }
+
 
   sendForm(form:FormGroup){
     this.submitted = true
-    if(form.invalid)
+    if(form.invalid || !this.file)
     return
     //enviar formulário utilizando o .pipe(finalize()) para integração com o loading
     this.loadingSubmit = true

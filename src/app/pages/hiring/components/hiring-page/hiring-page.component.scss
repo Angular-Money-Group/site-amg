@@ -1,9 +1,19 @@
 .curriculum{
   &--form{
     background: rgba(34, 114, 255, 0.1);
-    height: 658px;
     h4{
       font-weight: bolder;
+    }
+  }
+}
+
+@media (max-width:1000px){
+  .curriculum{
+    &--form{
+      width: 100% !important;
+    }
+    &--img{
+      display: none !important;
     }
   }
 }

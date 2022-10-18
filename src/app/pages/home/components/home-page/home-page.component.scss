@@ -1,3 +1,13 @@
+.pag{
+  width: 100%;
+  height: auto;
+  &__center{
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1444px;
+  }
+
+}
 .aling{
   &__top{
     width: 100%;
@@ -54,6 +64,44 @@
     height: 100px;
     background-repeat: no-repeat;
     background-image: url(../../../../../assets/backgrounds/bg-mid.png);
+  }
+}
+
+@media (max-width:950px){
+  .section{
+    &--first{
+      img{
+        width: 75%;
+        margin: 0 auto;
+      }
+      div{
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    &--second{
+      &--content{
+        width: 75% !important;
+        margin: 0 auto;
+      }
+        div{
+          width: 100%;
+          flex-direction: column;
+          gap: 40px;
+        }
+    }
+    &--third{
+      &--content{
+        width: 75% !important;
+        margin: 0 auto;
+      }
+        div{
+          width: 100%;
+          flex-direction: column;
+          gap: 40px;
+        }
+    }
   }
 }
 
