@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  menu: any[] = [
+    {route: '/sobre', name: 'Sobre AMG'},
+    {route: '/solucoes', name: 'Soluções'},
+    {route: '/trabalhe-conosco', name: 'Trabalhe Conosco'},
+    {route: '/contato', name: 'Contato'}
+  ]
+  toggle:boolean = false
+
+  constructor(
+    public router:Router
+  ) { }
 
   ngOnInit(): void {
   }
+
 
 }

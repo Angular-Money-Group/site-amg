@@ -57,6 +57,11 @@
   line-height: 20.4px;
 }
 
+.default-container{
+  width: 75%;
+  margin: 0 auto;
+}
+
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
