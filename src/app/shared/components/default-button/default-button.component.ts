@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DefaultButtonComponent implements OnInit {
   @Input() label!:string
   @Input() classes?:string = 'py-2 px-4'
-  @Input() arrow?:boolean
-
+  @Input() arrow?:boolean = false
+  @Input() loading?:boolean = false
 
   constructor() { }
 
