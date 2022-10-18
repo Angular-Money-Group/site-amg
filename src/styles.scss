@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Syne&display=swap');
 
-html{
-  min-width: 320px;
-}
-
 :root {
   /*principal colors*/
   --primary-color: #354739;
@@ -39,13 +35,6 @@ html{
     font-size: 24px;
     color: #FFFFFF;
   }
-
-.default-subtitle.tittle{
-  color: #3A5237 !important;
-  font-weight: 600 !important;
-  font-size: 21px !important;
-}
-
   &__default{
     font-weight: 400;
     font-size: 26px;
@@ -68,11 +57,19 @@ html{
   }
 }
 
+.default-subtitle.tittle{
+  color: #3A5237 !important;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+}
+
 .default-container{
   max-width: 1444px;
   width: 75%;
   margin: 0 auto;
 }
+
+
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";

@@ -7,10 +7,10 @@
   <div class="default-container">
     <div>
       <div  *ngFor="let item of contentTexts">
-        <h3 class="default-g-tittle text-center pb-3">{{item.title}}</h3>
+        <h3 class="text__green text-center pb-3">{{item.title}}</h3>
         <div class="pb-4" *ngFor="let subtitle of item.subtitle">
           <h2 class="default-subtitle.tittle text-center">{{subtitle.title}}</h2>
-          <p class="default-text text-center pb-4">{{subtitle.text}}</p>
+          <p class="text__desc text-center pb-4">{{subtitle.text}}</p>
         </div>
       </div>
     </div>
