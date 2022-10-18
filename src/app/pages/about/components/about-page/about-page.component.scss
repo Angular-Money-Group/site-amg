@@ -1,8 +1,20 @@
 .box{
   &__attr{
-    width: 25%;
+    width: 100%;
     margin: 25px;
     display: flex;
     flex-direction: column;
+  }
+  &--content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.about{
+  &--content{
+    max-width: 1280px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
