@@ -1,38 +1,47 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  selector: 'app-curriculum-form',
+  templateUrl: './curriculum-form.component.html',
+  styleUrls: ['./curriculum-form.component.scss']
 })
-export class ContactFormComponent implements OnInit {
+export class CurriculumFormComponent implements OnInit {
 
-  contactForm:FormGroup = new FormGroup({
+  curriculumForm:FormGroup = new FormGroup({
+    name: new FormControl ('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
     phoneNumber: new FormControl('', Validators.required),
-    message: new FormControl('')
+    message: new FormControl(''),
+    file: new FormControl(null, [Validators.required])
   })
+
   submitted:boolean = false;
   showMessage:boolean = false;
   loadingSubmit:boolean = false
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
 
+  get name () {
+    return this.curriculumForm.get('name')!
+  }
+
   get email () {
-    return this.contactForm.get('email')!
+    return this.curriculumForm.get('email')!
   }
 
   get phoneNumber () {
-    return this.contactForm.get('phoneNumber')!
+    return this.curriculumForm.get('phoneNumber')!
   }
 
   get message () {
-    return this.contactForm.get('message')!
+    return this.curriculumForm.get('message')!
   }
+
 
   sendForm(form:FormGroup){
     this.submitted = true
@@ -48,5 +57,6 @@ export class ContactFormComponent implements OnInit {
 
     this.submitted = false
   }
+
 
 }

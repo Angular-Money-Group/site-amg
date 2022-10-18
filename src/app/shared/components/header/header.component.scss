@@ -6,7 +6,7 @@ a{
 }
 
 .z-nav{
-  z-index: 999;
+  z-index: 4;
 }
 
 .arrow {
@@ -73,10 +73,10 @@ a{
   }
 }
 
-@media (max-width:930px){
+@media (max-width:952px){
   .menu{
     &--nav{
-      display: none;
+      display: none !important;
     }
     &--collapse{
       display: block;

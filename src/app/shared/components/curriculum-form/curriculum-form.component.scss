@@ -1,0 +1,40 @@
+input,textarea{
+  border-bottom: 3px solid var(--green);
+  background-color: transparent;
+  resize: none;
+  &:focus{
+    outline: none;
+  }
+}
+
+.file{
+  border: 0;
+  display: none;
+}
+label{
+  cursor: pointer;
+  color: rgba(23, 23, 23, 0.6);
+}
+
+input{
+  height: 55px;
+
+}
+
+textarea{
+  height:110px;
+}
+
+.validation{
+  &--box{
+    height: 30px;
+  }
+}
+
+@media (max-width:1024px){
+  .btn{
+    &--submit{
+      justify-content: center !important;
+    }
+  }
+}
