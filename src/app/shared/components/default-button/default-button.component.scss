@@ -29,6 +29,18 @@ button{
   }
 }
 
+.button-white{
+  background-color: #FFFF !important;
+  color: #587B52 !important;
+  &:hover{
+    background-color: #587B52 !important;
+    border: 1px solid white !important;
+    color: #FFFF !important;
+    transition: 1000ms !important;
+    cursor: pointer !important;
+  }
+}
+
 .arrow {
   border: solid rgb(255, 255, 255);
   border-width: 0 3px 3px 0;
