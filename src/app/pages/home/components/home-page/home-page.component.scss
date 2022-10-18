@@ -1,0 +1,68 @@
+.pag{
+  width: 100vw;
+  height: auto;
+  &__center{
+    width: 75%;
+    margin: 0 auto;
+  }
+
+}
+.aling{
+  &__top{
+    width: 100%;
+    padding: 320px 0;
+    background-image: url(../../../../../assets/backgrounds/bg-top.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__center{
+    width: 100%;
+    padding: 86px 0;
+    background-color: #F6F6F6;
+    display: flex;
+  }
+  &__call{
+    width: 100%;
+    padding: 138px 0;
+    background-color:#F6F6F6;
+    background-repeat: no-repeat;
+    background-image: url(../../../../../assets/backgrounds/bg-call.svg);
+    background-size: cover;
+  }
+  &__bot{
+    width: 100%;
+    padding-top: 140px;
+    padding-bottom: 30px;
+    background-color:#F6F6F6;
+  }
+}
+
+.box{
+  &__white{
+    background-color: #ffff;
+    width: 33%;
+    margin-right: 30px;
+    padding: 13px;
+    border-radius: 4px;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+  }
+  &__bot{
+    width: 50%;
+    margin-right: 30px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 0px 54px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+}
+.bg{
+  &__call{
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../../assets/backgrounds/bg-mid.png);
+  }
+}
+

@@ -18,45 +18,44 @@
   border: 0;
   font-family:  'Albert Sans', sans-serif;
 }
-.default-container{
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.display-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.default-b-tittle {
-  color: black;
-  margin: 5px;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 120%;
-}
-.default-g-tittle {
-  color: #587b52;
-  margin: 5px;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 120%;
-}
-.bold-tittle{
-  margin-left: 10%;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 22px;
-}
 
-.default-text {
-  color: #545454;
-  margin: 5px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 20.4px;
+.text{
+  &__title{
+    font-weight: 600;
+    font-size: 38px;
+    color: #FFFFFF;
+  }
+  &__subtitle-white{
+    font-weight: 400;
+    font-size: 38px;
+    color: #FFFFFF;
+  }
+  &__white-desc{
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  &__default{
+    font-weight: 400;
+    font-size: 26px;
+    color: #000000;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: #545454;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 16px;
+    color: #545454;
+  }
+  &__green{
+    font-weight: 600;
+    font-size: 24px;
+    color: #587B52;
+  }
 }
-
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
@@ -67,46 +66,5 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation: fadeIn 2s ease-in-out;
-  -moz-animation: fadeIn 2s ease-in-out;
-  -o-animation: fadeIn 2s ease-in-out;
-  animation: fadeIn 2s ease-in-out;
-}
-
-
-
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
