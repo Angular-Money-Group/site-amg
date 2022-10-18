@@ -1,3 +1,4 @@
+import { hiringTexts } from './../../model/texts';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hiring-page.component.scss']
 })
 export class HiringPageComponent implements OnInit {
+  contentTexts = hiringTexts
+
 
   constructor() { }
 
