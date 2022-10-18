@@ -3,7 +3,8 @@
     <div class="menu--top bg-dark py-2">
       <nav class="default-container d-flex justify-content-between">
         <div class="hover-underline-animation py-1" *ngFor="let item of menu"
-        routerLink="{{item.route}}">
+        routerLink="{{item.route}}"
+        (click)="defaultService.backToTop()">
           {{item.name}}
         </div>
       </nav>
@@ -14,6 +15,7 @@
         <img src="../../../../assets/svg/LOGO 4.svg" alt="amg" routerLink="/home">
         <app-default-button
         class="btn--contact"
+        (click)="defaultService.backToTop()"
         routerLink="/contato"
         [arrow]="false"
         [label]="'Contato'"

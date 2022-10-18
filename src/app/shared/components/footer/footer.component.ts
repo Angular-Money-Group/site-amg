@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DefaultService } from 'src/app/core/services/default-service/default.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,9 @@ export class FooterComponent implements OnInit {
   @Input() menu!:any[]
   year = new Date().getFullYear()
 
-  constructor() { }
+  constructor(
+    public defaultService:DefaultService
+  ) { }
 
   ngOnInit(): void {
   }

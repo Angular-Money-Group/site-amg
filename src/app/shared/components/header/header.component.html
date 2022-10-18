@@ -4,10 +4,10 @@
 >
   <div class="default-container">
     <div class="d-flex justify-content-between logos">
-      <div *ngIf="router.url === '/home'" routerLink="/home">
+      <div *ngIf="router.url === '/home'" routerLink="/home" (click)="defaultService.backToTop()">
         <img src="../../../../assets/logo-amg_white.svg" width="90" alt="" />
       </div>
-      <div *ngIf="router.url !== '/home'" routerLink="/home">
+      <div *ngIf="router.url !== '/home'" routerLink="/home" (click)="defaultService.backToTop()">
         <img src="../../../../assets/svg/LOGO 5.svg" width="90" alt="" />
       </div>
       <div class="menu">
@@ -17,6 +17,7 @@
               *ngIf="item.name !== 'Contato' && item.name !== 'Início'"
               class="text-decoration-none py-2 px-1"
               [routerLink]="[item.route]"
+              (click)="defaultService.backToTop()"
               [ngClass]="
               {
                 'text-dark': router.url !== '/home' ,
@@ -36,6 +37,7 @@
 
           <app-default-button
             class="btn--contact"
+            (click)="defaultService.backToTop()"
             routerLink="/contato"
             [arrow]="false"
             [label]="'Contato'"
@@ -88,7 +90,7 @@
       <div
       class="text-decoration-none py-2"
       routerLink="{{item.route}}"
-      (click)="toggle = !toggle">
+      (click)="toggle = !toggle ; defaultService.backToTop()">
       <a
       *ngIf="item.name !== 'Início'">{{item.name}}</a>
     </div>

@@ -1,5 +1,5 @@
 <div class="pag">
-  <h5 class="text__bold default-container">inicio / soluções</h5>
+  <h5 class="text__bold default-container">início / soluções</h5>
   <div class="pag__center d-flex section--first py-5">
     <img
       src="assets/backgrounds/bg-solution.png"
@@ -7,7 +7,7 @@
       width="50%"
     />
     <div class="w-50 aling__solutions">
-      <h3 class="text__green-title ">
+      <h3 class="text__green-title text-break ">
         Precisando de
         desenvolvedores, ou de
         squads para seu produto?
@@ -19,6 +19,7 @@
       </p>
       <app-default-button
         class="btn--contact"
+        (click)="defaultService.backToTop()"
         routerLink="/contato"
         [arrow]="false"
         [label]="'Fale com um especialista'"
@@ -61,10 +62,11 @@
     <div
       class="aling__box d-flex justify-content-center align-items-center flex-column default-container"
     >
-      <p class="text__title text-center default-container">
+      <p class="text__title text-center default-container pb-4">
         Seus projetos com produtividade, agilidade e redução de custos.
       </p>
       <app-default-button
+        (click)="defaultService.backToTop()"
         class="btn--contact"
         routerLink="/contato"
         [arrow]="false"

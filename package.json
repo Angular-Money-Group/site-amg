@@ -21,6 +21,7 @@
     "@angular/router": "^14.2.5",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@popperjs/core": "^2.10.2",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.1",
     "ngx-mask": "^14.2.3",
     "rxjs": "~7.5.0",

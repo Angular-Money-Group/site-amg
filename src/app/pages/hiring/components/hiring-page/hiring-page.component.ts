@@ -1,5 +1,6 @@
 import { hiringTexts } from './../../model/texts';
 import { Component, OnInit } from '@angular/core';
+import { DefaultService } from 'src/app/core/services/default-service/default.service';
 
 @Component({
   selector: 'app-hiring-page',
@@ -10,7 +11,9 @@ export class HiringPageComponent implements OnInit {
   contentTexts = hiringTexts
 
 
-  constructor() { }
+  constructor(
+    public defaultService:DefaultService
+  ) { }
 
   ngOnInit(): void {
   }

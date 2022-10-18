@@ -12,6 +12,7 @@ import { CurriculumFormComponent } from './components/curriculum-form/curriculum
 
 
 
+
 @NgModule({
   declarations: [
     FooterComponent,

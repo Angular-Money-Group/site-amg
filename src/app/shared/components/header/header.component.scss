@@ -83,6 +83,9 @@ a{
     }
     &--mobile{
       display: block;
+      position: absolute;
+      top: 120px;
+      left: 0px;
       &__settings{
         width: 98%;
         margin: 0 auto;
