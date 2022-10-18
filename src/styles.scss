@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Syne&display=swap');
 
-.fundo-branco{
-  width: 100%;
-  height: 200px;
+:root {
+  /*principal colors*/
+  --primary-color: #354739;
+  --secondary-color: #ffffff;
+  /*buttons colors*/
+  --black: #000000;
+  --white: #ffffff;
+  --white--gray: #F6F6F6;
+  --gray: #f5f5f5;
+  --green: #587b52;
+  --dark-green: #354739;
+  --medium-green: #3A5237;
+  --dark-gray: #545454;
+  --very-dark-gray: #262626;
+  /*fonts*/
 }
 
 * {
@@ -11,44 +23,109 @@
   border: 0;
   font-family:  'Albert Sans', sans-serif;
 }
-.default-container{
-  max-width: 1280px;
-  margin: 0 auto;
-}
-.display-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-:root {
-  /*principal colors*/
-  --primary-color: #354739;
-  --secondary-color: #ffffff;
-  /*buttons colors*/
-  --black: #000000;
-  --white: #ffffff;
-  --gray: #f5f5f5;
-  --green: #587b52;
-  /*fonts*/
+
+.button{
+  &__solution{
+    border-radius: 56px !important;
+  }
 }
 
-.button-template {
-  border: 2px solid transparent;
-  color: white;
-  background-color: #587b52;
-  font-family: "Albert Sans", sans-serif;
-  border-radius: 12px;
-  transition: 1s;
-  &:hover {
-    cursor: pointer;
-    border: 1px solid #587b52;
-    background: white;
-    color: #587b52;
+.text{
+  &__title{
+    font-weight: 600;
+    font-size: 38px;
+    color: var(--white);
   }
-  &:active:focus {
-    box-shadow: none;
+  &__title-black{
+    font-weight: 600;
+    font-size: 38px;
+    color: var(--black);
+  }
+  &__subtitle-white{
+    font-weight: 400;
+    font-size: 38px;
+    color: var(--white);
+  }
+  &__white-desc{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white);
+  }
+  &__default{
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--black);
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--dark-gray);
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark-gray);
+  }
+  &__bold{
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--black);
+  }
+  &__opc-title{
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--medium-green);
+  }
+  &__green{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--green);
+  }
+  &__green-title{
+    font-weight: 600;
+    font-size: 42px;
+    color: var(--green);
+  }
+  &__green-subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--green);
+  }
+  &__solution{
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--very-dark-gray);
   }
 }
+
+.default-subtitle.tittle{
+  color: var(--medium-green) !important;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+}
+
+.pag{
+  width: 100%;
+  height: auto;
+  &__center{
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1444px;
+  }
+}
+.default-subtitle.tittle{
+  color: var(--medium-green) !important;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+}
+
+.default-container{
+  max-width: 1444px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
@@ -59,68 +136,5 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation: fadeIn 2s ease-in-out;
-  -moz-animation: fadeIn 2s ease-in-out;
-  -o-animation: fadeIn 2s ease-in-out;
-  animation: fadeIn 2s ease-in-out;
-}
-.baseline-button .btn-outline-primary,
-.btnHome {
-  padding: 1%;
-  width: 132px;
-  height: 35px;
-  border: 2px;
-  color: var(--first-white);
-  background-color: #587b52;
-  font-family:  'Albert Sans', sans-serif;;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  border-radius: 12px;
-  transition: 1s;
-  &:hover {
-    cursor: pointer;
-    background: white;
-    color: #587b52;
-    border: 2px solid #587b52;
-  }
-  &:active:focus {
-    box-shadow: none;
-  }
-}
-
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,100 @@
+<div
+  class="w-100 py-5 position-absolute z-nav"
+  [ngClass]="{ 'nav-white': router.url !== '/home' }"
+>
+  <div class="default-container">
+    <div class="d-flex justify-content-between logos">
+      <div *ngIf="router.url === '/home'" routerLink="/home" (click)="defaultService.backToTop()">
+        <img src="../../../../assets/logo-amg_white.svg" width="90" alt="" />
+      </div>
+      <div *ngIf="router.url !== '/home'" routerLink="/home" (click)="defaultService.backToTop()">
+        <img src="../../../../assets/svg/LOGO 5.svg" width="90" alt="" />
+      </div>
+      <div class="menu">
+        <nav class="menu--nav d-flex">
+          <span class="px-3 d-flex align-items-center" *ngFor="let item of menu">
+            <a
+              *ngIf="item.name !== 'Contato' && item.name !== 'Início'"
+              class="text-decoration-none py-2 px-1"
+              [routerLink]="[item.route]"
+              (click)="defaultService.backToTop()"
+              [ngClass]="
+              {
+                'text-dark': router.url !== '/home' ,
+                'router-link-active': router.url == item.route
+              }
+              "
+              >{{ item.name }}</a
+            >
+
+            <!-- <div
+              class="arrow down"
+              *ngIf="item.name == 'Soluções'"
+              [ngClass]="{ 'arrow-black': router.url !== '/home' }"
+            ></div> -->
+
+          </span>
+
+          <app-default-button
+            class="btn--contact"
+            (click)="defaultService.backToTop()"
+            routerLink="/contato"
+            [arrow]="false"
+            [label]="'Contato'"
+            [classes]="'py-1 px-4'"
+          >
+          </app-default-button>
+        </nav>
+
+        <nav class="menu--collapse">
+          <img
+            src="../../../../assets/svg/list.svg"
+            width="40px"
+            alt="list"
+            *ngIf="router.url === '/home' && !toggle"
+            (click)="toggle = !toggle"
+          />
+          <img
+            src="../../../../assets/svg/list-black.svg"
+            width="40px"
+            alt="list"
+            *ngIf="router.url !== '/home' && !toggle"
+            (click)="toggle = !toggle"
+
+          />
+          <img
+            src="../../../../assets/svg/x-lg.svg"
+            width="40px"
+            alt="close"
+            *ngIf="router.url === '/home' && toggle"
+            (click)="toggle = !toggle"
+
+          />
+          <img
+            src="../../../../assets/svg/x-lg-black.svg"
+            width="40px"
+            alt="close"
+            *ngIf="router.url !== '/home' && toggle"
+            (click)="toggle = !toggle"
+
+          />
+        </nav>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="w-100 menu--mobile py-2 mt-2 z-nav" *ngIf="toggle">
+    <div *ngFor="let item of menu" class="d-flex justify-content-center menu--mobile__settings">
+      <div
+      class="text-decoration-none py-2"
+      routerLink="{{item.route}}"
+      (click)="toggle = !toggle ; defaultService.backToTop()">
+      <a
+      *ngIf="item.name !== 'Início'">{{item.name}}</a>
+    </div>
+    </div>
+  </div>
+
+</div>

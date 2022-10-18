@@ -1,0 +1,67 @@
+<div class="pag">
+  <div class="aling__top mb-5">
+    <p class="text__bold mb-5 default-container" data-aos="fade-up">
+      início / trabalhe conosco
+    </p>
+    <div class="pag__center">
+      <div class="d-flex flex-column">
+        <p class="text__title-black mt-5 mb-3" data-aos="fade-up">
+          Mostre suas <br>
+          habilidades como <br>
+          para o mundo.
+        </p>
+        <p class="text__default" data-aos="fade-up">
+          Faça parte desse time que só vem crescendo, <br>
+          estamos esperando por você.
+        </p>
+        <app-default-button
+        data-aos="fade-up"
+        class="btn--contact"
+        (click)="defaultService.backToTop()"
+        routerLink="/contato"
+        [arrow]="false"
+        [label]="'Vagas disponíveis'"
+        [classes]="'py-3 px-3 h3 my-4'"
+      >
+      <img src="../../../../../assets/icons/arrow-button.svg" data-aos="fade-up" alt=""
+      width="16px">
+      </app-default-button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="default-container">
+    <div>
+      <div  *ngFor="let item of contentTexts">
+        <h3 class="text__green text-center pb-3" data-aos="fade-up">{{item.title}}</h3>
+        <div class="pb-4" *ngFor="let subtitle of item.subtitle">
+          <h2 class="default-subtitle.tittle text-center" data-aos="fade-up">{{subtitle.title}}</h2>
+          <p class="text__desc text-center pb-4" data-aos="fade-up">{{subtitle.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="default-container d-flex py-5">
+
+    <div class="w-50 curriculum--form" data-aos="fade-up">
+      <div class="default-container">
+        <div class="w-100 p-3">
+          <h4 class="text-center">Envie seu currículo</h4>
+        </div>
+        <div>
+          <h5>Mande suas dúvidas, portfólios e ideias.</h5>
+        </div>
+        <div>
+          <app-curriculum-form></app-curriculum-form>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-50 d-flex align-items-center curriculum--img" data-aos="fade-up">
+      <img src="../../../../../assets/backgrounds/hiring-image.jpg" width="100%" alt="">
+    </div>
+  </div>
+
+</div>
