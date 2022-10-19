@@ -1,6 +1,7 @@
 <button
   [class]="classes" class="d-flex align-items-center">
   <div class="reload"*ngIf="loading"></div>
-  <span class="px-2">{{label}}</span>
+  <span class="px-2" [ngStyle]="{'font-size': labelFontSize}">{{label}}</span>
   <i *ngIf="arrow" class="arrow right m-auto"></i>
+  <i *ngIf="bigArrow" class="big--arrow big--right m-auto"></i>
 </button>

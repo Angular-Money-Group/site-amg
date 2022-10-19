@@ -1,6 +1,6 @@
 <div class="aling__center section--first">
   <div class="pag__center d-flex section--first--content">
-    <div class="d-flex justify-content-center flex-column w-75">
+    <div class="d-flex justify-content-center flex-column w-75 pb-3">
       <p class="text__green" data-aos="fade-up">Quem somos</p>
       <p class="text__default" data-aos="fade-up">
         Fundada em 2019, a Angular Money Group é uma <br />
@@ -10,6 +10,11 @@
         Atualmente, somos uma equipe com mais de 20 desenvolvedores,<br />
         com sede em Uberlândia, atendemos clientes em todo o país.
       </p>
+      <app-default-button
+      label="Sobre nós"
+      [arrow]="true"
+      routerLink="/sobre"
+      ></app-default-button>
     </div>
     <img src="assets/backgrounds/bg-mid.png" alt="" width="50%" data-aos="fade-up"/>
   </div>
