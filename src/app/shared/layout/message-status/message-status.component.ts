@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angu
   templateUrl: './message-status.component.html',
   styleUrls: ['./message-status.component.scss']
 })
-export class MessageStatusComponent implements OnInit, OnChanges {
+export class MessageStatusComponent implements OnInit {
   @Input() showMessage:boolean = false
   @Input() title:string = 'Sucesso'
   @Input() text?:string = ''
@@ -16,13 +16,6 @@ export class MessageStatusComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges(){
-    if(this.showMessage)
-    setInterval(() => {
-      this.showMessage = false
-    }, 3000)
   }
 
   formatColorMessage(type:string){

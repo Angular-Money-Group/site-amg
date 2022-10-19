@@ -9,9 +9,20 @@ button{
     border: 1px solid var(--green);
     transition: 1000ms;
     transform: scale(1.03);
+    .big{
+      &--arrow{
+        border: solid var(--green);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 7px;
+        transition: 1000ms;
+      }
+    }
     .arrow{
       border: solid var(--green);
       border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
       transition: 1000ms;
     }
     .reload{
@@ -51,6 +62,19 @@ button{
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
+}
+
+.big{
+  &--arrow{
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 6px;
+  }
+  &--right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
 }
 
 .reload{
