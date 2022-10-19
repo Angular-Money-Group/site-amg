@@ -1,3 +1,5 @@
+import { HeaderComponent } from './core/components/header/header.component';
+import { FooterComponent } from './core/components/footer/footer.component'
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -16,6 +18,8 @@ import { NgxMaskModule } from 'ngx-mask';
     SharedModule,
     RouterModule,
     NgxMaskModule.forRoot(),
+    FooterComponent,
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -49,6 +49,8 @@ export class CurriculumFormComponent implements OnInit {
 
   sendForm(form:FormGroup){
     this.submitted = true
+    console.log(form.value);
+
     if(form.invalid || !this.file)
     return
     //enviar formulário utilizando o .pipe(finalize()) para integração com o loading

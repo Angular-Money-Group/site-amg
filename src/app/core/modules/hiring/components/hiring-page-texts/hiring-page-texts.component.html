@@ -1,0 +1,11 @@
+<div class="default-container">
+  <div>
+    <div  *ngFor="let item of contentTexts">
+      <h3 class="text__green text-center pb-3" data-aos="fade-up">{{item.title}}</h3>
+      <div class="pb-4" *ngFor="let subtitle of item.subtitle">
+        <h2 class="default-subtitle.tittle text-center" data-aos="fade-up">{{subtitle.title}}</h2>
+        <p class="text__desc text-center pb-4" data-aos="fade-up">{{subtitle.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>
