@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DefaultService } from '../../../../services/default-service/default.service';
 
 @Component({
   selector: 'app-home-page-we-are',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageWeAreComponent implements OnInit {
 
-  constructor() { }
+  constructor(public defaultService:DefaultService) { }
 
   ngOnInit(): void {
   }

@@ -2,8 +2,8 @@
   <div class="pag__center section--second--content">
     <p class="text__green" data-aos="fade-up">Trabalhe conosco</p>
 
-    <div class="d-flex pb-4" data-aos="fade-up">
-      <div class="box__white" data-aos="fade-up">
+    <div class="d-flex pb-4 gap-3" data-aos="fade-up">
+      <div class="box__white m-0" data-aos="fade-up">
         <img src="assets/icons/icon-call-1.svg" width="48px"data-aos="fade-up" />
         <p class="text__default mt-2" data-aos="fade-up">Potencial de crescimento.</p>
         <p class="text__desc" data-aos="fade-up">
@@ -12,7 +12,7 @@
           soluções para as necessidades de cada cliente
         </p>
       </div>
-      <div class="box__white" data-aos="fade-up">
+      <div class="box__white m-0" data-aos="fade-up">
         <img src="assets/icons/Icon-call-2.svg" width="48px" data-aos="fade-up"/>
         <p class="text__default mt-2" data-aos="fade-up">Feita de pessoas.</p>
         <p class="text__desc" data-aos="fade-up">
@@ -21,7 +21,7 @@
           ganhando.
         </p>
       </div>
-      <div class="box__white" data-aos="fade-up">
+      <div class="box__white m-0" data-aos="fade-up">
         <img src="assets/icons/icon-call-3.svg" width="48px" />
         <p class="text__default mt-2" data-aos="fade-up">Apaixonados pelo que fazemos.</p>
         <p class="text__desc" data-aos="fade-up">
@@ -34,6 +34,8 @@
     <app-default-button
     label="Vagas disponíveis"
     [arrow]="true"
-    routerLink="/trabalhe-conosco"></app-default-button>
+    routerLink="/trabalhe-conosco"
+    (click)="defaultService.backToTop()"
+    ></app-default-button>
   </div>
 </div>

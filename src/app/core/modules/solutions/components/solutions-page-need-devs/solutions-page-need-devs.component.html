@@ -16,15 +16,17 @@
       necessidade, seguindo a melhor forma
       ágil de trabalhar.
     </p>
+
+<div class="margin-button">
     <app-default-button
-    data-aos="fade-up"
-      class="btn--contact"
-      (click)="defaultService.backToTop()"
-      routerLink="/contato"
-      [arrow]="false"
-      [label]="'Fale com um especialista'"
-      [classes]="'py-3 px-3 h3 button__solution '"
-    >
-    </app-default-button>
+        [bigArrow]="true"
+        label="Fale com especialista"
+        classes="py-3 px-4"
+        labelFontSize="20px"
+        (click)="defaultService.backToTop()"
+        routerLink="/contato">
+      </app-default-button>
+</div>
+
   </div>
 </div>
