@@ -11,6 +11,13 @@
       <p class="text__white-desc" data-aos="fade-up">
         Conectamos sua empresa com o mundo da tecnologia em tempo hábil
       </p>
+      <app-default-button
+      [bigArrow]="true"
+      label="Entrar em contato"
+      classes="py-3 px-4"
+      (click)="defaultService.backToTop()"
+      labelFontSize="20px"
+      routerLink="/contato"></app-default-button>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 .aling{
   &__solutions{
     width: 100%;
-    p,h3{
+    p,h3,.margin-button{
       margin-left: 15px;
     }
   }
@@ -19,7 +19,7 @@
 }
 
 @media (max-width:1430px){
-  p,h3{
+  p,h3,.margin-button{
     margin: 20px 0!important;
   }
   .section{
