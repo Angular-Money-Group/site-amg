@@ -1,0 +1,86 @@
+button{
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 12px;
+  border: 1px solid transparent;
+  &:hover{
+    background-color: var(--white);
+    color: var(--green);
+    border: 1px solid var(--green);
+    transition: 1000ms;
+    transform: scale(1.03);
+    .arrow{
+      border: solid var(--green);
+      border-width: 0 3px 3px 0;
+      transition: 1000ms;
+    }
+    .reload{
+      border: 3px solid var(--white);
+      border-top: 3px solid var(--green);
+      transition: 1000ms;
+    }
+  }
+  &:not(:hover){
+    transition: 1000ms;
+    transform: scale(1);
+    .arrow{
+      transition: 1000ms;
+    }
+  }
+}
+
+.button-white{
+  background-color: var(--white) !important;
+  color: var(--green) !important;
+  &:hover{
+    background-color: var(--green) !important;
+    border: 1px solid var(--white) !important;
+    color: var(--white) !important;
+    transition: 1000ms !important;
+    cursor: pointer !important;
+  }
+}
+
+.arrow {
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.reload{
+  border: 3px solid var(--green);
+  border-radius: 50%;
+  border-top: 3px solid var(--white);
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 1.3s linear infinite;
+  /* Safari */
+  animation: spin 1.2s linear infinite;
+}
+
+ /* Safari */
+ @-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

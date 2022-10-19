@@ -1,0 +1,36 @@
+input,textarea{
+  border: 1px solid var(--green);
+  resize: none;
+  &:focus{
+    outline: 2px solid var(--green);
+  }
+}
+
+input{
+  height: 55px;
+  background: url('./../../../../assets/svg/two-envelops.svg') no-repeat scroll 7px 7px;
+  background-position: 1.5% 50%;
+  padding-left:30px;
+}
+
+textarea{
+  height:110px;
+  background: url('./../../../../assets/svg/two-envelops.svg') no-repeat scroll 7px 7px;
+  background-position: 1.5% 20%;
+  padding-left:30px;
+  padding: 15px 0px 0px 30px;
+}
+
+.validation{
+  &--box{
+    height: 30px;
+  }
+}
+
+@media (max-width:1024px){
+  .btn{
+    &--submit{
+      justify-content: center !important;
+    }
+  }
+}

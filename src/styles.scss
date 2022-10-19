@@ -1,175 +1,140 @@
-// @import "./app/shared/scss/mixins.scss";
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
-// .btn-outline-info {
-//   width: 125px;
-//   height: 52px;
-//   border: 2px solid #000000;
-//   border-radius: 10px;
-//   background: #ffffff;
-//   border-radius: 8.45882px;
-//   margin-left: 25px;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 12px;
-//   color: #000000;
-//   cursor: pointer;
-//   &:hover {
-//     color: #ffffff;
-//     background: #000000;
-//     border: 2px solid #000000;
-//   }
-// }
-// ::ng-deep .btn-outline-primary {
-//   width: 130px;
-//   height: 40px;
-//   border: 2px solid #ffffff;
-//   color: #ffffff;
-//   background-color: transparent;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 16px;
-//   &:hover {
-//     cursor: pointer;
-//     background: #ffffff;
-//     color: #354739;
-//     border: 2px solid #354739;
-//   }
-// }
-// .btn-black {
-//   background: #000000;
-//   border: 1px solid #000000;
-//   border-radius: 10px;
-//   width: 155px;
-//   height: 52px;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 12px;
-//   color: #ffffff;
-//   cursor: pointer;
-//   &:hover {
-//     color: #000000;
-//     background: #ffffff;
-//     border: 2px solid #000000;
-//   }
-// }
-// .btn-primary {
-//   width: 130px;
-//   height: 40px;
-//   background-color: #000000;
-//   border-color: #ffffff;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 14px;
-//   &:hover {
-//     background-color: #ffffff;
-//     color: #000000;
-//     border: 1px solid #000000;
-//   }
-// }
-// .btn-white-mobile {
-//   width: 210px;
-//   height: 60px;
-//   background: #ffffff;
-//   border-radius: 10px;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 16px;
-//   &:hover {
-//     background: #354739;
-//     color: #ffffff;
-//     border: 1px solid #ffffff;
-//   }
-// }
-// .btn-white {
-//   width: 180px;
-//   height: 45px;
-//   background: #ffffff;
-//   border-radius: 10px;
-//   font-family: "Rubik";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 14px;
-//   &:hover {
-//     background: #354739;
-//     color: #ffffff;
-//     border: 1px solid #ffffff;
-//   }
-// }
-// .accordion-button {
-//   position: inherit !important;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans&family=Syne&display=swap');
 
-// /*font implement*/
-// @import url("https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Montserrat:wght@400;500;700&family=Poppins:wght@600&family=Rubik:wght@500&display=swap");
-// /*variables*/
-// :root {
-//   /*principal colors*/
-//   --primary-color: #354739;
-//   --secondary-color: #ffffff;
-//   /*buttons colors*/
-//   --black: #000000;
-//   --white: #ffffff;
-//   --gray: #f5f5f5;
-//   /*fonts*/
-// }
-// /*global settings*/
-// * {
-//   padding: 0;
-//   margin: 0;
-//   box-sizing: border-box;
-// }
-// /* Importing Bootstrap SCSS file. */
-// @import "~bootstrap/scss/bootstrap";
-// body,
-// html {
-//   min-width: 375px;
-//   width: 100%;
-//   overflow-x: hidden;
-//   scroll-behavior: smooth;
-// }
-// @-webkit-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// @-moz-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// @-o-keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// .fadeIn {
-//   -webkit-animation: fadeIn 2s ease-in-out;
-//   -moz-animation: fadeIn 2s ease-in-out;
-//   -o-animation: fadeIn 2s ease-in-out;
-//   animation: fadeIn 2s ease-in-out;
-// }
+:root {
+  /*principal colors*/
+  --primary-color: #354739;
+  --secondary-color: #ffffff;
+  /*buttons colors*/
+  --black: #000000;
+  --white: #ffffff;
+  --white--gray: #F6F6F6;
+  --gray: #f5f5f5;
+  --green: #587b52;
+  --dark-green: #354739;
+  --medium-green: #3A5237;
+  --dark-gray: #545454;
+  --very-dark-gray: #262626;
+  /*fonts*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family:  'Albert Sans', sans-serif;
+}
+
+.button{
+  &__solution{
+    border-radius: 56px !important;
+  }
+}
+
+.text{
+  &__title{
+    font-weight: 600;
+    font-size: 38px;
+    color: var(--white);
+  }
+  &__title-black{
+    font-weight: 600;
+    font-size: 38px;
+    color: var(--black);
+  }
+  &__subtitle-white{
+    font-weight: 400;
+    font-size: 38px;
+    color: var(--white);
+  }
+  &__white-desc{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white);
+  }
+  &__default{
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--black);
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--dark-gray);
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark-gray);
+  }
+  &__bold{
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--black);
+  }
+  &__opc-title{
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--medium-green);
+  }
+  &__green{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--green);
+  }
+  &__green-title{
+    font-weight: 600;
+    font-size: 42px;
+    color: var(--green);
+  }
+  &__green-subtitle{
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--green);
+  }
+  &__solution{
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--very-dark-gray);
+  }
+}
+
+.default-subtitle.tittle{
+  color: var(--medium-green) !important;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+}
+
+.pag{
+  width: 100%;
+  height: auto;
+  &__center{
+    width: 75%;
+    margin: 0 auto;
+    max-width: 1444px;
+  }
+}
+.default-subtitle.tittle{
+  color: var(--medium-green) !important;
+  font-weight: 600 !important;
+  font-size: 21px !important;
+}
+
+.default-container{
+  max-width: 1444px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+body,
+html {
+  min-width: 375px;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

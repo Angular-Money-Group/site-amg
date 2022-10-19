@@ -1,0 +1,30 @@
+<div class="pag__center d-flex section--first py-5">
+  <img
+  data-aos="fade-up"
+    src="assets/backgrounds/bg-solution.png"
+    alt="bg-solutions"
+    width="50%"
+  />
+  <div class="w-50 aling__solutions">
+    <h3 class="text__green-title text-break " data-aos="fade-up">
+      Precisando de
+      desenvolvedores, ou de
+      squads para seu produto?
+    </h3>
+    <p class="text__green-subtitle mt-5 " data-aos="fade-up">
+      Montamos um time de acordo com sua
+      necessidade, seguindo a melhor forma
+      ágil de trabalhar.
+    </p>
+    <app-default-button
+    data-aos="fade-up"
+      class="btn--contact"
+      (click)="defaultService.backToTop()"
+      routerLink="/contato"
+      [arrow]="false"
+      [label]="'Fale com um especialista'"
+      [classes]="'py-3 px-3 h3 button__solution '"
+    >
+    </app-default-button>
+  </div>
+</div>
