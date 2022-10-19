@@ -1,14 +1,15 @@
-import { SharedModule } from './../../shared/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { HiringPageComponent } from './components/hiring-page/hiring-page.component';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes:Routes = [{path:'', component:ContactPageComponent}]
+const routes:Routes = [{path:'', component:HiringPageComponent}]
 
 @NgModule({
   declarations: [
-    ContactPageComponent,
+    HiringPageComponent
   ],
   imports: [
     CommonModule,
@@ -16,4 +17,4 @@ const routes:Routes = [{path:'', component:ContactPageComponent}]
     SharedModule
   ]
 })
-export class ContactModule { }
+export class HiringModule { }

@@ -1,5 +1,6 @@
-import { DefaultService } from './../../../../core/services/default-service/default.service';
+
 import { Component, OnInit } from '@angular/core';
+import { DefaultService } from 'src/app/core/services/default-service/default.service';
 
 @Component({
   selector: 'app-about-page',
