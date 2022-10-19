@@ -9,23 +9,23 @@ const routes: Routes = [
   },
   {
     path: 'sobre',
-    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
+    loadChildren: () => import('./core/modules/about/about.module').then(m => m.AboutModule)
   },
   {
     path: 'contato',
-    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule)
+    loadChildren: () => import('./core/modules/contact/contact.module').then(m => m.ContactModule)
   },
   {
     path: 'trabalhe-conosco',
-    loadChildren: () => import('./pages/hiring/hiring.module').then(m => m.HiringModule)
+    loadChildren: () => import('./core/modules/hiring/hiring.module').then(m => m.HiringModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./core/modules/home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'solucoes',
-    loadChildren: () => import('./pages/solutions/solutions.module').then(m => m.SolutionsModule)
+    loadChildren: () => import('./core/modules/solutions/solutions.module').then(m => m.SolutionsModule)
   }
 ]
 
