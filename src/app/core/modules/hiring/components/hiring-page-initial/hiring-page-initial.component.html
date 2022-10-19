@@ -1,0 +1,29 @@
+<div class="aling__top mb-5">
+  <p class="text__bold mb-5 default-container" data-aos="fade-up">
+    início / trabalhe conosco
+  </p>
+
+  <div class="pag__center">
+    <div class="d-flex flex-column">
+      <p class="text__title-black mt-5 mb-3" data-aos="fade-up">
+        Mostre suas <br>
+        habilidades como <br>
+        para o mundo.
+      </p>
+      <p class="text__default" data-aos="fade-up">
+        Faça parte desse time que só vem crescendo, <br>
+        estamos esperando por você.
+      </p>
+      <app-default-button
+      data-aos="fade-up"
+      class="btn--contact"
+      (click)="defaultService.backToTop()"
+      routerLink="/contato"
+      [arrow]="false"
+      [label]="'Vagas disponíveis'"
+      [classes]="'py-3 px-3 h3 my-4'"
+    >
+    </app-default-button>
+    </div>
+  </div>
+</div>

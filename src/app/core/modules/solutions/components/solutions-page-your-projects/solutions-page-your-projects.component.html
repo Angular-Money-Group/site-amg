@@ -1,0 +1,19 @@
+<div class="pag w-100 section--third" style="background-color: #587b52" data-aos="fade-up">
+  <div
+    class="aling__box d-flex justify-content-center align-items-center flex-column default-container"
+  >
+    <p class="text__title text-center default-container pb-4" data-aos="fade-up">
+      Seus projetos com produtividade, agilidade e redução de custos.
+    </p>
+    <app-default-button
+      data-aos="fade-up"
+      (click)="defaultService.backToTop()"
+      class="btn--contact"
+      routerLink="/contato"
+      [arrow]="false"
+      [label]="'Fale com um especialista'"
+      [classes]="'py-3 px-3 h3 button__solution button-white'"
+    >
+    </app-default-button>
+  </div>
+</div>
