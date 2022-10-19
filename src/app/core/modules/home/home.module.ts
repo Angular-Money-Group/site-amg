@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './components/home-page/home-page.component';
@@ -6,6 +7,7 @@ import { HomePageInitialComponent } from './components/home-page-initial/home-pa
 import { HomePageWeAreComponent } from './components/home-page-we-are/home-page-we-are.component';
 import { HomePageHiringComponent } from './components/home-page-hiring/home-page-hiring.component';
 import { HomePageSustainabilityComponent } from './components/home-page-sustainability/home-page-sustainability.component';
+import { HomePageSuggestionComponent } from './components/home-page-suggestion/home-page-suggestion.component';
 
 const routes:Routes = [{path:'', component:HomePageComponent}]
 
@@ -15,11 +17,13 @@ const routes:Routes = [{path:'', component:HomePageComponent}]
     HomePageInitialComponent,
     HomePageWeAreComponent,
     HomePageHiringComponent,
-    HomePageSustainabilityComponent
+    HomePageSustainabilityComponent,
+    HomePageSuggestionComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    SharedModule
   ]
 })
 export class HomeModule { }

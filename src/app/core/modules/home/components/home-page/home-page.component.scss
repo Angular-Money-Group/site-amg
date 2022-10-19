@@ -66,7 +66,6 @@
     background-image: url('/assets/backgrounds/bg-mid.png');
   }
 }
-
 @media (max-width:950px){
   .section{
     &--first{
@@ -102,6 +101,23 @@
           gap: 40px;
         }
     }
+    &--forth{
+      &--content{
+        width: 75% !important;
+        margin: 0 auto;
+
+      }
+        div{
+          width: 100%;
+          flex-direction: column;
+          gap: 40px;
+        }
+    }
   }
-}
+  .aling{
+    &__top{
+      background-position: 80% 40%;
+    }
+
+}}
 
