@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
 import { MessageStatusComponent } from './layout/message-status/message-status.component';
 import { CurriculumFormComponent } from './components/curriculum-form/curriculum-form.component';
+import { DefaultModalComponent } from './components/default-modal/default-modal.component';
 
 
 
@@ -16,7 +17,8 @@ import { CurriculumFormComponent } from './components/curriculum-form/curriculum
     ContactFormComponent,
     DefaultButtonComponent,
     MessageStatusComponent,
-    CurriculumFormComponent
+    CurriculumFormComponent,
+    DefaultModalComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { CurriculumFormComponent } from './components/curriculum-form/curriculum
     ContactFormComponent,
     DefaultButtonComponent,
     MessageStatusComponent,
-    CurriculumFormComponent
+    CurriculumFormComponent,
+    DefaultModalComponent
   ]
 })
 export class SharedModule { }

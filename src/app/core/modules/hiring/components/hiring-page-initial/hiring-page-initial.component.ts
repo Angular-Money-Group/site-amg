@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hiring-page-initial.component.scss']
 })
 export class HiringPageInitialComponent implements OnInit {
-
+  showModal: boolean = false;
   constructor(
     public defaultService:DefaultService
   ) { }
