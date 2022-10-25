@@ -1,3 +1,4 @@
+import { ContactService } from './../core/modules/contact/services/contact.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,7 +19,7 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     DefaultButtonComponent,
     MessageStatusComponent,
     CurriculumFormComponent,
-    DefaultModalComponent
+    DefaultModalComponent,
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,4 @@
+import { ContactService } from './services/contact.service';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,7 @@ const routes:Routes = [{path:'', component:ContactPageComponent}]
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
   ]
 })
 export class ContactModule { }
