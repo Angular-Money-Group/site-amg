@@ -1,7 +1,7 @@
 import { IContactForm } from './../../models/contact';
 import { IMessageConfig } from './../../layout/message-status/message-status.component';
 import { finalize } from 'rxjs';
-import { HiringService } from './../../../core/modules/hiring/services/hiring.service';
+import { HiringService } from './../../../modules/hiring/services/hiring.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { sizeFileValidator, typeFileValidator } from './validators';

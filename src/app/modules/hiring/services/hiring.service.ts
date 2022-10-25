@@ -1,7 +1,8 @@
-import { IContactForm } from './../../../../shared/models/contact';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IContactForm } from 'src/app/shared/models/contact';
 import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
