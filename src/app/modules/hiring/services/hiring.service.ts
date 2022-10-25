@@ -14,11 +14,9 @@ export class HiringService {
     private http: HttpClient
   ) { }
 
-    sendCurriculum(values:IContactForm): Observable<any>{
+    sendCurriculum(values:any): Observable<any>{
       const url = environment.contact;
       console.log('response:',values);
-      return this.http.post(url,values,{
-        responseType: 'arraybuffer'
-      })
+      return this.http.post(url,values)
     }
 }

@@ -13,7 +13,11 @@ import { IContactForm } from '../../models/contact';
 export class ContactFormComponent implements OnInit {
   form!:FormGroup
   openMessage = new EventEmitter
-  modalMessage!:IMessageConfig
+  modalMessage:IMessageConfig  = {
+    text: 'Mensagem enviada com sucesso!',
+    title: 'Enviado',
+    type: 'success'
+  }
   submitted:boolean = false;
   showMessage:boolean = false;
   loadingSubmit:boolean = false
