@@ -1,5 +1,4 @@
 import { SharedModule } from 'src/app/shared/shared.module';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HiringPageComponent } from './components/hiring-page/hiring-page.component';
@@ -20,7 +19,7 @@ const routes:Routes = [{path:'', component:HiringPageComponent}]
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
   ]
 })
 export class HiringModule { }

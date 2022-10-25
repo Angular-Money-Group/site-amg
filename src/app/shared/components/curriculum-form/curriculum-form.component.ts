@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { IContactForm } from './../../models/contact';
+import { IMessageConfig } from './../../layout/message-status/message-status.component';
+import { finalize } from 'rxjs';
+import { HiringService } from './../../../core/modules/hiring/services/hiring.service';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { sizeFileValidator, typeFileValidator } from './validators';
 
 @Component({
   selector: 'app-curriculum-form',
@@ -8,61 +13,68 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class CurriculumFormComponent implements OnInit {
 
-  curriculumForm:FormGroup = new FormGroup({
-    name: new FormControl ('', [Validators.required]),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('', Validators.required),
-    message: new FormControl(''),
-  })
-  file:any = null
-
-  submitted:boolean = false;
-  showMessage:boolean = false;
+  form!:FormGroup
+  openMessage = new EventEmitter;
+  modalMessage!:IMessageConfig
   loadingSubmit:boolean = false
+  submitted:boolean = false;
 
   constructor(
+    private hiringService:HiringService,
+    private fb:FormBuilder
   ) { }
 
   ngOnInit(): void {
-  }
-
-  get name () {
-    return this.curriculumForm.get('name')!
-  }
-
-  get email () {
-    return this.curriculumForm.get('email')!
-  }
-
-  get phoneNumber () {
-    return this.curriculumForm.get('phoneNumber')!
-  }
-
-  get message () {
-    return this.curriculumForm.get('message')!
+    this.form = this.fb.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.minLength(11)]],
+      message: [''],
+      curriculum:['',[Validators.required, sizeFileValidator(10),typeFileValidator()]]
+    })
   }
 
   onFilechange(event:any){
-    this.file = event.target.files[0]
+    const file: File = <File>event.target.files[0];
+    this.form.get('curriculum')?.setValue(file)
   }
-
 
   sendForm(form:FormGroup){
     this.submitted = true
-    console.log(form.value);
-
-    if(form.invalid || !this.file)
+    if(form.invalid)
     return
-    //enviar formulário utilizando o .pipe(finalize()) para integração com o loading
     this.loadingSubmit = true
-    setTimeout(() => {
+
+    const formData = new FormData()
+    formData.append(
+      'curriculum',
+      form.get('curriculum')?.value,
+      form.get('curriculum')?.value?.name
+    )
+    form.get('curriculum')?.setValue(formData)
+
+    const response:IContactForm = form.value
+    this.hiringService.sendCurriculum(response)
+    .pipe(finalize(() => {
       this.loadingSubmit = false
-      this.showMessage = true
-    },500)
-
-
+    }))
+    .subscribe(
+      res => {
+        this.modalMessage = {
+          text: 'Mensagem enviada com sucesso!',
+          title: 'Enviado',
+          type: 'success'
+        }
+      },
+      err => {
+        this.modalMessage = {
+          text: 'Houve um erro ao enviar sua mensagem!',
+          title: 'Erro',
+          type: 'error'
+        }
+      })
+    this.openMessage.emit()
     this.submitted = false
+    this.form.reset()
   }
-
-
 }
