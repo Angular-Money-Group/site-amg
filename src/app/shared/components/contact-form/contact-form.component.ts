@@ -1,5 +1,5 @@
 import { finalize } from 'rxjs';
-import { ContactService } from './../../../core/modules/contact/services/contact.service';
+import { ContactService } from './../../../modules/contact/services/contact.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { IMessageConfig } from '../../layout/message-status/message-status.component';
@@ -13,7 +13,11 @@ import { IContactForm } from '../../models/contact';
 export class ContactFormComponent implements OnInit {
   form!:FormGroup
   openMessage = new EventEmitter
-  modalMessage!:IMessageConfig
+  modalMessage:IMessageConfig  = {
+    text: 'Mensagem enviada com sucesso!',
+    title: 'Enviado',
+    type: 'success'
+  }
   submitted:boolean = false;
   showMessage:boolean = false;
   loadingSubmit:boolean = false

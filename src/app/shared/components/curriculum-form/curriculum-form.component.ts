@@ -1,10 +1,11 @@
 import { IContactForm } from './../../models/contact';
 import { IMessageConfig } from './../../layout/message-status/message-status.component';
 import { finalize } from 'rxjs';
-import { HiringService } from './../../../core/modules/hiring/services/hiring.service';
+import { HiringService } from './../../../modules/hiring/services/hiring.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { sizeFileValidator, typeFileValidator } from './validators';
+import { toFormData } from '../../models/formData';
 
 @Component({
   selector: 'app-curriculum-form',
@@ -15,7 +16,11 @@ export class CurriculumFormComponent implements OnInit {
 
   form!:FormGroup
   openMessage = new EventEmitter;
-  modalMessage!:IMessageConfig
+  modalMessage:IMessageConfig  = {
+    text: 'Mensagem enviada com sucesso!',
+    title: 'Enviado',
+    type: 'success'
+  }
   loadingSubmit:boolean = false
   submitted:boolean = false;
 
@@ -45,16 +50,7 @@ export class CurriculumFormComponent implements OnInit {
     return
     this.loadingSubmit = true
 
-    const formData = new FormData()
-    formData.append(
-      'curriculum',
-      form.get('curriculum')?.value,
-      form.get('curriculum')?.value?.name
-    )
-    form.get('curriculum')?.setValue(formData)
-
-    const response:IContactForm = form.value
-    this.hiringService.sendCurriculum(response)
+    this.hiringService.sendCurriculum(toFormData(form.value))
     .pipe(finalize(() => {
       this.loadingSubmit = false
     }))

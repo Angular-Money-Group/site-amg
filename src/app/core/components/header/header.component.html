@@ -17,11 +17,11 @@
               *ngIf="item.name !== 'Contato' && item.name !== 'Início'"
               class="text-decoration-none py-2 px-1"
               [routerLink]="[item.route]"
+              routerLinkActive="router-link-active"
               (click)="defaultService.backToTop()"
               [ngClass]="
               {
-                'text-dark': router.url !== '/home' ,
-                'router-link-active': router.url == item.route
+                'text-dark': router.url !== '/home'
               }
               "
               >{{ item.name }}</a

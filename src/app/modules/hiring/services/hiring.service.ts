@@ -1,7 +1,8 @@
-import { IContactForm } from './../../../../shared/models/contact';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IContactForm } from 'src/app/shared/models/contact';
 import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
@@ -13,11 +14,9 @@ export class HiringService {
     private http: HttpClient
   ) { }
 
-    sendCurriculum(values:IContactForm): Observable<any>{
+    sendCurriculum(values:any): Observable<any>{
       const url = environment.contact;
       console.log('response:',values);
-      return this.http.post(url,values,{
-        responseType: 'arraybuffer'
-      })
+      return this.http.post(url,values)
     }
 }
