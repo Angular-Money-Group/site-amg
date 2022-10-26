@@ -1,5 +1,5 @@
+import { ContactService } from './../../../core/services/contact.service';
 import { finalize } from 'rxjs';
-import { ContactService } from './../../../modules/contact/services/contact.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { IMessageConfig } from '../../layout/message-status/message-status.component';
@@ -19,7 +19,6 @@ export class ContactFormComponent implements OnInit {
     type: 'success'
   }
   submitted:boolean = false;
-  showMessage:boolean = false;
   loadingSubmit:boolean = false
 
   constructor(

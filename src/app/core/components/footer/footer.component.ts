@@ -2,7 +2,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { DefaultService } from 'src/app/core/services/default-service/default.service';
+import { DefaultService } from 'src/app/core/services/default.service';
 
 @Component({
   selector: 'app-footer',

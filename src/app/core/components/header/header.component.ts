@@ -1,7 +1,7 @@
 import { SharedModule } from 'src/app/shared/shared.module';
 import { Router, RouterModule } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
-import { DefaultService } from 'src/app/core/services/default-service/default.service';
+import { DefaultService } from 'src/app/core/services/default.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

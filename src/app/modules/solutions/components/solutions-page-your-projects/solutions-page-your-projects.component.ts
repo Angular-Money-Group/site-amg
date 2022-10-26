@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { DefaultService } from 'src/app/core/services/default-service/default.service';
+import { DefaultService } from 'src/app/core/services/default.service';
 
 @Component({
   selector: 'app-solutions-page-your-projects',

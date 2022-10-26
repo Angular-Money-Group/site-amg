@@ -27,7 +27,7 @@
   </div>
 
   <div>
-    <textarea name="" id="" cols="20" rows="10" maxlength="300" class="rounded w-100" placeholder="Descreva aqui sua mensagem..." formControlName="message"></textarea>
+    <textarea name="" id="" cols="20" rows="10" maxlength="300" class="rounded w-100" placeholder="*Descreva aqui sua mensagem..." formControlName="message"></textarea>
     <div class="validation--box d-flex align-items-center ">
       <span class="text-danger"  *ngIf="
       form.get('message')?.errors?.['required']  && submitted

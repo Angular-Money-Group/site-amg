@@ -1,7 +1,7 @@
+import { ContactService } from './../../../core/services/contact.service';
 import { IContactForm } from './../../models/contact';
 import { IMessageConfig } from './../../layout/message-status/message-status.component';
 import { finalize } from 'rxjs';
-import { HiringService } from './../../../modules/hiring/services/hiring.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { sizeFileValidator, typeFileValidator } from './validators';
@@ -25,7 +25,7 @@ export class CurriculumFormComponent implements OnInit {
   submitted:boolean = false;
 
   constructor(
-    private hiringService:HiringService,
+    private contactService:ContactService,
     private fb:FormBuilder
   ) { }
 
@@ -50,7 +50,7 @@ export class CurriculumFormComponent implements OnInit {
     return
     this.loadingSubmit = true
 
-    this.hiringService.sendCurriculum(toFormData(form.value))
+    this.contactService.sendContact(toFormData(form.value))
     .pipe(finalize(() => {
       this.loadingSubmit = false
     }))

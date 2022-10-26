@@ -5,10 +5,10 @@
   <div class="default-container">
     <div class="d-flex justify-content-between logos">
       <div *ngIf="router.url === '/home'" routerLink="/home" (click)="defaultService.backToTop()">
-        <img src="../../../../assets/logo-amg_white.svg" width="90" alt="" />
+        <img src="src/assets/logo-amg_white.svg" width="90" alt="" />
       </div>
       <div *ngIf="router.url !== '/home'" routerLink="/home" (click)="defaultService.backToTop()">
-        <img src="../../../../assets/svg/LOGO 5.svg" width="90" alt="" />
+        <img src="src/assets/svg/LOGO 5.svg" width="90" alt="" />
       </div>
       <div class="menu">
         <nav class="menu--nav d-flex">
@@ -48,14 +48,14 @@
 
         <nav class="menu--collapse">
           <img
-            src="../../../../assets/svg/list.svg"
+            src="src/assets/svg/list.svg"
             width="40px"
             alt="list"
             *ngIf="router.url === '/home' && !toggle"
             (click)="toggle = !toggle"
           />
           <img
-            src="../../../../assets/svg/list-black.svg"
+            src="src/assets/svg/list-black.svg"
             width="40px"
             alt="list"
             *ngIf="router.url !== '/home' && !toggle"
@@ -63,7 +63,7 @@
 
           />
           <img
-            src="../../../../assets/svg/x-lg.svg"
+            src="src/assets/svg/x-lg.svg"
             width="40px"
             alt="close"
             *ngIf="router.url === '/home' && toggle"
@@ -71,7 +71,7 @@
 
           />
           <img
-            src="../../../../assets/svg/x-lg-black.svg"
+            src="src/assets/svg/x-lg-black.svg"
             width="40px"
             alt="close"
             *ngIf="router.url !== '/home' && toggle"

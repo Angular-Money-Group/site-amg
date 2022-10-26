@@ -1,5 +1,3 @@
-import { ContactService } from './services/contact.service';
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';

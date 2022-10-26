@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -23,7 +24,8 @@ const routes:Routes = [{path:'', component:HomePageComponent}]
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
