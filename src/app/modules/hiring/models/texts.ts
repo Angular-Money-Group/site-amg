@@ -8,7 +8,7 @@ export const hiringTexts = [
       },
       {
         title: 'Feita de Pessoas',
-        text: 'Se todos estiverem bem, com equilíbrio entre a vida pessoal e profissional, criamos uma relação de proximidade em que todos saem ganhando.'
+        text: 'Quando todos estão bem, há equilíbrio entre vida pessoal e profissional, criamos uma relação próxima onde todos ganham.'
       },
       {
         title: 'Apaixonados pelo que fazemos',
@@ -21,7 +21,7 @@ export const hiringTexts = [
     subtitle:[
       {
         title:'Treinamentos, Cursos e Palestras',
-        text:'A empresa possui local amplo para a realização dos treinamentos e realizados por meio de profissionais qualificados e credenciados com recursos audiovisuais e apostilas.'
+        text:'A empresa possui local amplo para a realização dos treinamentos realizados por meio de profissionais qualificados e credenciados com recursos audiovisuais e apostilas.'
       }
     ]
   },

@@ -1,8 +1,8 @@
 <footer class="menu">
 
-    <div class="menu--top bg-dark py-2">
+    <div class="menu--top bg-dark">
       <nav class="default-container d-flex justify-content-between">
-        <div class="hover-underline-animation py-1" *ngFor="let item of menu" data-aos="fade-up"
+        <div class="hover-underline-animation py-2" *ngFor="let item of menu" data-aos="fade-up"
         routerLink="{{item.route}}"
         (click)="defaultService.backToTop()">
           {{item.name}}
@@ -10,23 +10,11 @@
       </nav>
     </div>
 
-    <div class="py-3 menu--center">
-      <div class="default-container d-flex justify-content-between align-items-center">
-        <img src="assets/svg/LOGO 4.svg" data-aos="fade-up" alt="amg" routerLink="/home">
-        <app-default-button
-        data-aos="fade-up"
-        class="btn--contact"
-        (click)="defaultService.backToTop()"
-        routerLink="/contato"
-        [arrow]="false"
-        [label]="'Contato'"
-        [classes]="'py-1 px-4'"
-      >
-      </app-default-button>
-      </div>
-    </div>
-
-  <div class="menu--bottom bg-dark">
-    <span class="text-white d-flex justify-content-center py-1 text-center default-container" data-aos="fade-up">Todos os direitos reservados ANGULAR MONEY GROUP &copy; {{year}}.</span>
+  <div class="default-container menu--bottom d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+        <img class="py-2" src="assets/svg/LOGO 4.svg" data-aos="fade-up" alt="amg" routerLink="/home">
+        </div>
+    <span class="d-flex text-center align-items-center" data-aos="fade-up">Todos os direitos reservados ANGULAR MONEY GROUP &copy; {{year}}.</span>
+    <div class="py-2" style="width: 50px;"></div>
   </div>
 </footer>
