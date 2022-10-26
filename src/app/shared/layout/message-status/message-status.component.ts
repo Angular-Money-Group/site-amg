@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
@@ -21,11 +22,17 @@ export class MessageStatusComponent implements OnInit {
   @Output() modalClosed: EventEmitter<any> = new EventEmitter();
   @Input() openMessage!:Observable<any>
 
-  constructor() { }
+  constructor(
+    private route:Router
+  ) { }
 
   ngOnInit(): void {
+    this.route.events.subscribe(() => {
+      this.showMessage = false
+    })
+
     this.openMessage.subscribe(() => {
-      this.closeMessage()
+      this.messageStatus()
     })
   }
 
@@ -38,8 +45,15 @@ export class MessageStatusComponent implements OnInit {
     return type? FORMAT_COLOR_TYPE[type] : ''
   }
 
-  closeMessage(){
-    if(!this.showMessage)
-    this.showMessage = !this.showMessage
+  messageStatus(){
+    if(!this.showMessage){
+      this.showMessage = true
+    }
+    else{
+      this.showMessage = false
+      setInterval(() => {
+        this.showMessage = true
+      }, 700);
+    }
   }
 }
