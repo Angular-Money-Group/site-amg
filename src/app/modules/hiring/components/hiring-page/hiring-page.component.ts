@@ -1,5 +1,5 @@
 import { hiringTexts } from '../../models/texts';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { DefaultService } from 'src/app/core/services/default-service/default.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { DefaultService } from 'src/app/core/services/default-service/default.se
 })
 export class HiringPageComponent implements OnInit {
   contentTexts = hiringTexts
+  goToCurriculum = new EventEmitter()
 
 
   constructor(
