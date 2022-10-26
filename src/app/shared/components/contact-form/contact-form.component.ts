@@ -26,43 +26,42 @@ export class ContactFormComponent implements OnInit {
     private contactService:ContactService
     ) { }
 
-  ngOnInit(): void {
-    this.form = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required, Validators.minLength(11)],
-      message: ['', [Validators.required]]
-    })
-  }
+    ngOnInit(): void {
+      this.form = this.fb.group({
+        email: ['', [Validators.required, Validators.email]],
+        phone: ['', [Validators.required, Validators.minLength(11)]],
+        message: ['', [Validators.required]]
+      })
+    }
 
-  sendForm(form:FormGroup){
-    this.submitted = true
-    if(form.invalid)
-    return
-    this.loadingSubmit = true
+    sendForm(form:FormGroup){
+      this.submitted = true
+      if(form.invalid)
+      return
+      this.loadingSubmit = true
 
-    const response:IContactForm = form.value
-    this.contactService.sendContact(response)
-    .pipe(finalize(() => {
-      this.loadingSubmit = false
+      this.contactService.sendContact(form.value)
+      .pipe(finalize(() => {
+        this.loadingSubmit = false
+      }))
+      .subscribe(
+        res => {
+          this.modalMessage = {
+            text: 'Mensagem enviada com sucesso!',
+            title: 'Enviado',
+            type: 'success'
+          }
+        },
+        err => {
+          this.modalMessage = {
+            text: 'Houve um erro ao enviar sua mensagem!',
+            title: 'Erro',
+            type: 'error'
+          }
+        })
       this.openMessage.emit()
-    }))
-    .subscribe(
-      res => {
-        this.modalMessage = {
-          text: 'Mensagem enviada com sucesso!',
-          title: 'Enviado',
-          type: 'success'
-        }
-      },
-      err => {
-      this.modalMessage = {
-        text: 'Houve um erro ao enviar sua mensagem!',
-        title: 'Erro',
-        type: 'error'
-      }
-    })
-    this.submitted = false
-    this.form.reset()
-  }
+      this.submitted = false
+      this.form.reset()
+    }
 
 }
