@@ -12,7 +12,7 @@
   &__top{
     width: 100%;
     padding: 320px 0;
-    background-image: url('/assets/backgrounds/bg-top.svg');
+    background-image: url('../../../../../assets/backgrounds/bg-top.svg');
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -27,7 +27,7 @@
     padding: 138px 0;
     background-color:var(--white-gray);
     background-repeat: no-repeat;
-    background-image: url('/assets/backgrounds/bg-call.svg');
+    background-image: url('../../../../../assets/backgrounds/bg-call.svg');
     background-size: cover;
   }
   &__bot{
@@ -63,7 +63,7 @@
     width: 100%;
     height: 100px;
     background-repeat: no-repeat;
-    background-image: url('/assets/backgrounds/bg-mid.png');
+    background-image: url('../../../../../assets/backgrounds/bg-mid.png');
   }
 }
 

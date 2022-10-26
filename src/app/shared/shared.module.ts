@@ -1,4 +1,3 @@
-import { ContactService } from './../modules/contact/services/contact.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,6 +8,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { MessageStatusComponent } from './layout/message-status/message-status.component';
 import { CurriculumFormComponent } from './components/curriculum-form/curriculum-form.component';
 import { DefaultModalComponent } from './components/default-modal/default-modal.component';
+import { DefaultCarouselComponent } from './components/default-carousel/default-carousel.component';
 
 
 
@@ -20,6 +20,7 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     MessageStatusComponent,
     CurriculumFormComponent,
     DefaultModalComponent,
+    DefaultCarouselComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,8 @@ import { DefaultModalComponent } from './components/default-modal/default-modal.
     DefaultButtonComponent,
     MessageStatusComponent,
     CurriculumFormComponent,
-    DefaultModalComponent
+    DefaultModalComponent,
+    DefaultCarouselComponent
   ]
 })
 export class SharedModule { }
