@@ -1,5 +1,12 @@
+import { Observable } from 'rxjs';
 import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+
+export interface IMessageConfig{
+  text:string,
+  title:string,
+  type: 'success' | 'alert' | 'error' | 'none'
+}
 
 @Component({
   selector: 'app-message-status',
@@ -12,10 +19,14 @@ export class MessageStatusComponent implements OnInit {
   @Input() text?:string = ''
   @Input() type: 'success' | 'alert' | 'error' | 'none' = 'none'
   @Output() modalClosed: EventEmitter<any> = new EventEmitter();
+  @Input() openMessage!:Observable<any>
 
   constructor() { }
 
   ngOnInit(): void {
+    this.openMessage.subscribe(() => {
+      this.closeMessage()
+    })
   }
 
   formatColorMessage(type:string){
@@ -28,7 +39,7 @@ export class MessageStatusComponent implements OnInit {
   }
 
   closeMessage(){
-    this.showMessage = false
-    this.modalClosed.emit()
+    if(!this.showMessage)
+    this.showMessage = !this.showMessage
   }
 }

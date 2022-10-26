@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { finalize } from 'rxjs';
+import { ContactService } from './../../../modules/contact/services/contact.service';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { IMessageConfig } from '../../layout/message-status/message-status.component';
+import { IContactForm } from '../../models/contact';
 
 @Component({
   selector: 'app-contact-form',
@@ -7,46 +11,59 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent implements OnInit {
-
-  contactForm:FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('', Validators.required),
-    message: new FormControl('')
-  })
+  form!:FormGroup
+  openMessage = new EventEmitter
+  modalMessage:IMessageConfig  = {
+    text: 'Mensagem enviada com sucesso!',
+    title: 'Enviado',
+    type: 'success'
+  }
   submitted:boolean = false;
   showMessage:boolean = false;
   loadingSubmit:boolean = false
 
-  constructor() { }
+  constructor(
+    private fb:FormBuilder,
+    private contactService:ContactService
+    ) { }
 
   ngOnInit(): void {
-  }
-
-  get email () {
-    return this.contactForm.get('email')!
-  }
-
-  get phoneNumber () {
-    return this.contactForm.get('phoneNumber')!
-  }
-
-  get message () {
-    return this.contactForm.get('message')!
+    this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required, Validators.minLength(11)],
+      message: ['', [Validators.required]]
+    })
   }
 
   sendForm(form:FormGroup){
     this.submitted = true
     if(form.invalid)
     return
-    //enviar formulário utilizando o .pipe(finalize()) para integração com o loading
     this.loadingSubmit = true
-    setTimeout(() => {
+
+    const response:IContactForm = form.value
+    this.contactService.sendContact(response)
+    .pipe(finalize(() => {
       this.loadingSubmit = false
-      this.showMessage = true
-    },500)
-
-
+      this.openMessage.emit()
+    }))
+    .subscribe(
+      res => {
+        this.modalMessage = {
+          text: 'Mensagem enviada com sucesso!',
+          title: 'Enviado',
+          type: 'success'
+        }
+      },
+      err => {
+      this.modalMessage = {
+        text: 'Houve um erro ao enviar sua mensagem!',
+        title: 'Erro',
+        type: 'error'
+      }
+    })
     this.submitted = false
+    this.form.reset()
   }
 
 }

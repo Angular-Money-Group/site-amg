@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxMaskModule } from 'ngx-mask';
     RouterModule,
     NgxMaskModule.forRoot(),
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
