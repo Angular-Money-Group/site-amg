@@ -9,6 +9,7 @@ import { MessageStatusComponent } from './layout/message-status/message-status.c
 import { CurriculumFormComponent } from './components/curriculum-form/curriculum-form.component';
 import { DefaultModalComponent } from './components/default-modal/default-modal.component';
 import { DefaultCarouselComponent } from './components/default-carousel/default-carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -28,6 +29,7 @@ import { DefaultCarouselComponent } from './components/default-carousel/default-
     FormsModule,
     ReactiveFormsModule,
     NgxMaskModule.forChild(),
+    NgbModule
   ],
   exports: [
     ContactFormComponent,
