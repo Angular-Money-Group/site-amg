@@ -1,4 +1,3 @@
-import { ContactService } from './../modules/contact/services/contact.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,10 +20,7 @@ import { DefaultCarouselComponent } from './components/default-carousel/default-
     MessageStatusComponent,
     CurriculumFormComponent,
     DefaultModalComponent,
-<<<<<<< Updated upstream
-=======
     DefaultCarouselComponent
->>>>>>> Stashed changes
   ],
   imports: [
     CommonModule,

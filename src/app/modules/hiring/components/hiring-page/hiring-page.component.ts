@@ -1,6 +1,6 @@
 import { hiringTexts } from '../../models/texts';
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { DefaultService } from 'src/app/core/services/default-service/default.service';
+import { DefaultService } from 'src/app/core/services/default.service';
 
 @Component({
   selector: 'app-hiring-page',
