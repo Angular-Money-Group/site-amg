@@ -41,7 +41,11 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+@media (max-width:500px){
+  .logo-4{
+    display: none;
+  }
+}
 @media (max-width:930px){
   .menu{
     .hover-underline-animation:after {
@@ -69,3 +73,4 @@ nav{
     }
      }
 }
+
