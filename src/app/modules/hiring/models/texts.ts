@@ -21,7 +21,7 @@ export const hiringTexts = [
     subtitle:[
       {
         title:'Treinamentos, Cursos e Palestras',
-        text:'A empresa disponibiliza de um espaço para realizar treinamentos conduzidos por  profissionais qualificados com recursos audiovisuais, apostilas e equipamentos necessários.'
+        text:'A empresa disponibiliza de um espaço para realizar treinamentos conduzidos por profissionais qualificados com recursos audiovisuais, apostilas e equipamentos necessários.'
       }
     ]
   },
