@@ -1,0 +1,29 @@
+# Node.js with Angular
+# Build a Node.js project that uses Angular.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+    - homologacao
+
+pool:
+  vmImage: ubuntu-latest
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.17.0'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @angular/cli
+    npm i angular-cli-ghpages --save-dev
+    npm install
+  displayName: 'Install Dependences'
+
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Build'
+
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Deploy Github Pages'
