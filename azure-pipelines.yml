@@ -11,14 +11,16 @@ trigger:
     - development
     - release
     - release/*
+    - feature/*
 
 pool:
   vmImage: ubuntu-latest
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '16.17.0'
   displayName: 'Install Node.js'
+
 - script: |
     npm install -g @angular/cli
     npm install
