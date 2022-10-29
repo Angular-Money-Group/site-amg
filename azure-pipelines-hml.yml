@@ -4,19 +4,26 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+    - homologacao
 
 pool:
   vmImage: ubuntu-latest
-
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '16.17.0'
   displayName: 'Install Node.js'
 
 - script: |
     npm install -g @angular/cli
+    npm i angular-cli-ghpages --save-dev
     npm install
-    ng build --prod
-  displayName: 'npm install and build'
+  displayName: 'Install Dependences'
+
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Build'
+
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Deploy Github Pages'
