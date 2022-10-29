@@ -1,0 +1,9 @@
+<div class="pag">
+
+  <app-hiring-page-initial (goToCurriculumEvent)="goToCurriculum.emit()"></app-hiring-page-initial>
+
+  <app-hiring-page-texts></app-hiring-page-texts>
+
+  <app-hiring-page-curriculum [goToCurriculum]="goToCurriculum.asObservable()"></app-hiring-page-curriculum>
+
+</div>

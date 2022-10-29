@@ -1,0 +1,21 @@
+<div class="success--box rounded d-flex p-2" *ngIf="showMessage" data-aos="fade-left"
+[ngStyle]="{'border-left':formatColorMessage(type)}"
+>
+  <div class="d-flex justify-content-center align-items-center p-2">
+    <img src="assets/svg/check-circle.svg" width="30px" alt="" *ngIf="type == 'success'">
+    <img src="assets/svg/x-circle.svg" width="30px" alt="" *ngIf="type == 'error'">
+    <img src="assets/svg/exclamation-circle.svg" width="30px" alt="" *ngIf="type == 'alert'">
+  </div>
+  <div>
+    <div class="font-weight-bolder success--box--tittle">
+      {{title}}
+    </div>
+    <div>
+      {{text}}
+    </div>
+  </div>
+  <div class="d-flex justify-content-center align-items-center p-2 success--box--close" (click)="showMessage = false">
+    Fechar
+  </div>
+</div>
+

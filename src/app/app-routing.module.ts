@@ -4,37 +4,34 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomeModule),
+    redirectTo: 'home',
+    pathMatch:'full'
   },
   {
-    path: 'comunidade',
-    loadChildren: () =>
-      import('./modules/community/community.module').then(
-        (m) => m.CommunityModule
-      ),
+    path: 'sobre',
+    loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
   },
   {
-    path: 'servicos',
-    loadChildren: () =>
-      import('./modules/servicos/servicos.module').then(
-        (m) => m.ServicosModule
-      ),
+    path: 'contato',
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path: 'empresa',
-    loadChildren: () =>
-      import('./modules/about-us/about-us.module').then((m) => m.AboutUsModule),
+    path: 'trabalhe-conosco',
+    loadChildren: () => import('./modules/hiring/hiring.module').then(m => m.HiringModule)
   },
   {
-    path: 'cursos',
-    loadChildren: () =>
-      import('./modules/courses/courses.module').then((m) => m.CoursesModule),
+    path: 'home',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
-];
+  {
+    path: 'solucoes',
+    loadChildren: () => import('./modules/solutions/solutions.module').then(m => m.SolutionsModule)
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers:[]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
