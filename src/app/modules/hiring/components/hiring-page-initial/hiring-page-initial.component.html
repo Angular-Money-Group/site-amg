@@ -1,6 +1,7 @@
 <div class="aling__top mb-5">
   <p class="text__bold mb-5 default-container" data-aos="fade-up">
-    início / trabalhe conosco
+    <span routerLink="/" (click)="defaultService.backToTop()" style="cursor: pointer;">início </span>
+    / trabalhe conosco
   </p>
 
   <div class="pag__center">
@@ -9,12 +10,12 @@
         O seu futuro está aqui.
       </p>
       <p class="text__default" data-aos="fade-up">
-        Faça parte desse time que só vem crescendo, <br>
-        estamos esperando por você.
+        Faça parte desse time que só vem crescendo. <br>
+        Estamos esperando por você!
       </p>
       <app-default-button
       [bigArrow]="true"
-      label="Vagas disponíveis"
+      label="Envie seu currículo"
       classes="py-3 px-4"
       (click)="goToCurriculumEvent.emit()"
       labelFontSize="20px"></app-default-button>

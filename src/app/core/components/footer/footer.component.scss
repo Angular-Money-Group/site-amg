@@ -1,5 +1,12 @@
 .menu{
-  background-color: black;
+  background-color: #D9D9D9;
+  span{
+    color:#587B52;
+    font-weight: 900;
+  }
+  img{
+    width: 50px;
+  }
 }
 
 nav{
@@ -34,7 +41,11 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
+@media (max-width:500px){
+  .logo-4{
+    display: none;
+  }
+}
 @media (max-width:930px){
   .menu{
     .hover-underline-animation:after {
@@ -60,5 +71,6 @@ nav{
         }
       }
     }
-  }
+     }
 }
+
