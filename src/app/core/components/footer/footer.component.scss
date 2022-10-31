@@ -3,6 +3,7 @@
   span{
     color:#587B52;
     font-weight: 900;
+    white-space: nowrap;
   }
   img{
     width: 50px;
@@ -41,9 +42,35 @@ nav{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.fa-whatsapp{
+  color: var(--medium-green);
+}
+
+.phoneNumber {
+  color: var(--medium-green);
+  margin: 0 0.5rem;
+  white-space: nowrap;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 5%;
+}
+
 @media (max-width:500px){
   .logo-4{
     display: none;
+  }
+
+  .menu--bottom{
+    flex-direction: column;
+    align-items: center;
+   }
+
+   a{
+    margin: 3% 0;
   }
 }
 @media (max-width:930px){
@@ -73,4 +100,5 @@ nav{
     }
      }
 }
+
 
