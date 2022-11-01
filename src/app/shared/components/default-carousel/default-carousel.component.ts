@@ -7,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultCarouselComponent implements OnInit {
 
- carouselConfig : any;
+ imageUrls= [
+      { image: "assets/svg/rooms/sala-2.svg"},
+     { image:  "assets/svg/rooms/sala-6.svg"},
+      { image: "assets/svg/rooms/sala-7.svg"} ]
+
+
   constructor() { }
 
   ngOnInit(): void {
-    this.carouselConfig = {
-      title: "",
-      subtitle: "",
-      imageUrls: ["assets/svg/rooms/sala-2.svg", "assets/svg/rooms/sala-2.svg", "assets/svg/rooms/sala-2.svg" ]
-    };
-  }
 
+
+}
 }

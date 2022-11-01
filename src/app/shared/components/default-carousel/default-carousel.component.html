@@ -1,29 +1,12 @@
 <ngb-carousel class="m-4">
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper" *ngFor="let photo of carouselConfig.imageUrls let i = index">
-			<img class="d-block w-100" src="../../../../assets/svg/rooms/sala-10.svg"  alt="Random first slide" />
+
+	<ng-template ngbSlide *ngFor="let photo of imageUrls let i = index">
+		<div class="picsum-img-wrapper"  [ngClass]="{'active': i == 0 }">
+			<img height="400px"  class="d-block w-100" src="{{photo.image}}"  alt="Random first slide" />
 		</div>
 		<div class="carousel-caption">
 			<h3>First slide label</h3>
 			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 		</div>
 	</ng-template>
-	<!-- <ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img class="d-block w-100" src="../../../../assets/svg/rooms/Sala 6.png" alt="Random second slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Second slide label</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img class="d-block w-100" src="../../../../assets/svg/rooms/Sala 7.png" alt="Random third slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Third slide label</h3>
-			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-		</div>
-	</ng-template> -->
 </ngb-carousel>
