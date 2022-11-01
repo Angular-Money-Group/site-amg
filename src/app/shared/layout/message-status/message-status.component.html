@@ -2,9 +2,9 @@
 [ngStyle]="{'border-left':formatColorMessage(type)}"
 >
   <div class="d-flex justify-content-center align-items-center p-2">
-    <img src="assets/svg/check-circle.svg" width="30px" alt="" *ngIf="type == 'success'">
-    <img src="assets/svg/x-circle.svg" width="30px" alt="" *ngIf="type == 'error'">
-    <img src="assets/svg/exclamation-circle.svg" width="30px" alt="" *ngIf="type == 'alert'">
+    <img loading=lazy src="assets/svg/check-circle.svg" width="30px" alt="" *ngIf="type == 'success'">
+    <img loading=lazy src="assets/svg/x-circle.svg" width="30px" alt="" *ngIf="type == 'error'">
+    <img loading=lazy src="assets/svg/exclamation-circle.svg" width="30px" alt="" *ngIf="type == 'alert'">
   </div>
   <div>
     <div class="font-weight-bolder success--box--tittle">
