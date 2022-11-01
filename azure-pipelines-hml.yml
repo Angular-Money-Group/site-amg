@@ -4,14 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-    - main
-    - master
-    - dev
-    - develop
-    - development
-    - release
-    - release/*
-    - feature/*
+    - homologacao
 
 pool:
   vmImage: ubuntu-latest
@@ -23,7 +16,14 @@ steps:
 
 - script: |
     npm install -g @angular/cli
+    npm i angular-cli-ghpages --save-dev
     npm install
-    ng build --configuration production --base-href "/"
+  displayName: 'Install Dependences'
 
-  displayName: 'npm install and build'
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Build'
+
+- script: |
+      npx angular-cli-ghpages --dir=dist/site-amg
+    displayName: 'Deploy Github Pages'
