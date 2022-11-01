@@ -2,7 +2,7 @@
 
 	<ng-template ngbSlide *ngFor="let photo of imageUrls let i = index">
 		<div class="picsum-img-wrapper"  [ngClass]="{'active': i == 0 }">
-			<img loading=lazy height="400px"  class="d-block w-100" src="{{photo.image}}"  alt="Random first slide" />
+			<img loading="lazy" height="400px"  class="d-block w-100" src="{{photo.image}}"  alt="Random first slide" />
 		</div>
 		<div class="carousel-caption">
 			<h3>First slide label</h3>
