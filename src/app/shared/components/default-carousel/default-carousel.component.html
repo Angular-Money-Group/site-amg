@@ -1,5 +1,4 @@
 <ngb-carousel class="m-4">
-
 	<ng-template ngbSlide *ngFor="let photo of imageUrls let i = index">
 		<div class="picsum-img-wrapper"  [ngClass]="{'active': i == 0 }">
 			<img loading="lazy" height="400px"  class="d-block w-100" src="{{photo.image}}"  alt="Random first slide" />
