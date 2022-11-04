@@ -5,10 +5,10 @@
   <div class="default-container">
     <div class="d-flex justify-content-between logos">
       <div *ngIf="router.url === '/home'" routerLink="/home" (click)="defaultService.backToTop()">
-        <img src="assets/logo-amg_white.svg" width="90" alt="" />
+        <img load="lazy" src="assets/logo-amg_white.svg" width="90" alt="" />
       </div>
       <div *ngIf="router.url !== '/home'" routerLink="/home" (click)="defaultService.backToTop()">
-        <img src="assets/svg/LOGO 5.svg" width="90" alt="" />
+        <img load="lazy" src="assets/svg/LOGO 5.svg" width="90" alt="" />
       </div>
       <div class="menu">
         <nav class="menu--nav d-flex">
@@ -47,14 +47,14 @@
         </nav>
 
         <nav class="menu--collapse">
-          <img
+          <img load="lazy"
             src="assets/svg/list.svg"
             width="40px"
             alt="list"
             *ngIf="router.url === '/home' && !toggle"
             (click)="toggle = !toggle"
           />
-          <img
+          <img load="lazy"
             src="assets/svg/list-black.svg"
             width="40px"
             alt="list"
@@ -62,7 +62,7 @@
             (click)="toggle = !toggle"
 
           />
-          <img
+          <img load="lazy"
             src="assets/svg/x-lg.svg"
             width="40px"
             alt="close"
@@ -70,7 +70,7 @@
             (click)="toggle = !toggle"
 
           />
-          <img
+          <img load="lazy"
             src="assets/svg/x-lg-black.svg"
             width="40px"
             alt="close"
