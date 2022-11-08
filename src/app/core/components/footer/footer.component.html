@@ -1,19 +1,20 @@
 <footer class="menu">
+      <div class="menu--top bg-dark">
+        <nav class="default-container d-flex justify-content-between">
+          <div class="hover-underline-animation py-2" *ngFor="let item of menu" data-aos="fade-up"
+          routerLink="{{item.route}}"
+          (click)="defaultService.backToTop()">
+            {{item.name}}
+          </div>
+        </nav>
+      </div>
 
-    <div class="menu--top bg-dark">
-      <nav class="default-container d-flex justify-content-between">
-        <div class="hover-underline-animation py-2" *ngFor="let item of menu" data-aos="fade-up"
-        routerLink="{{item.route}}"
-        (click)="defaultService.backToTop()">
-          {{item.name}}
-        </div>
-      </nav>
+    <div class="default-container menu--bottom d-flex justify-content-between">
+          <div class="d-flex align-items-center">
+          <img loading="lazy" class="logo-4 py-2" src="assets/svg/LOGO 4.svg" data-aos="fade-up" (click)="defaultService.backToTop()" alt="amg" routerLink="/home">
+          </div>
+          <span class="d-flex text-center align-items-center" data-aos="fade-up">Todos os direitos reservados ANGULAR MONEY GROUP &copy; {{year}}.</span>
+          <div class="py-2" style="width: 50px;"></div>
     </div>
 
-  <div class="default-container menu--bottom d-flex justify-content-between">
-        <div class="d-flex align-items-center">
-        <img loading="lazy" class="logo-4 py-2" src="assets/svg/LOGO 4.svg" data-aos="fade-up" (click)="defaultService.backToTop()" alt="amg" routerLink="/home">
-        </div>
-    <span class="d-flex text-center align-items-center" data-aos="fade-up">Todos os direitos reservados <br> ANGULAR MONEY GROUP &copy; {{year}}.</span>
-  </div>
 </footer>
