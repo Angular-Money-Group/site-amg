@@ -24,6 +24,16 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+
+  displayName: 'Npm Install'
+
+- script: |
+    ng test --watch=false --browsers=ChromeHeadless --code-coverage
+
+  displayName: 'Unit Test'
+
+- script: |
     ng build --configuration production --base-href "/"
 
-  displayName: 'npm install and build'
+  displayName: 'Build'
+
