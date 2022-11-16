@@ -45,11 +45,14 @@
           max-width: 100%;
         }
         h3{
-          max-width: 50%;
+          max-width: 100%;
         }
       }
     }
     &--fourth{
+      .bot-image{
+        display: none;
+      }
       img{
         display: none;
       }
