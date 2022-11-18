@@ -45,19 +45,23 @@
           max-width: 100%;
         }
         h3{
-          max-width: 50%;
+          max-width: 100%;
         }
       }
     }
     &--fourth{
+      .bot-image{
+        display: none;
+      }
       img{
         display: none;
       }
       .aling__bot{
-        width: 100%;
+        width: 100%!important;
       }
     }
   }
+
 }
 
 @media (max-width:950px){
